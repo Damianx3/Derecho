@@ -1,0 +1,70 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+
+# Keep example configuration
+!.env.example
+
+# =========================
+# macOS / IDE
+# =========================
+.DS_Store
+.vscode/
+.idea/
+
+# =========================
+# Frontend
+# =========================
+node_modules/
+dist/
+.next/
+
+# =========================
+# AI models
+# =========================
+models/
+*.gguf
+*.onnx
+*.tflite
+
+# Large downloaded model binaries
+*.bin
+
+# =========================
+# Audio / temporary files
+# =========================
+*.wav
+*.mp3
+*.m4a
+tmp/
+temp/
+cache/
+.cache/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Secrets / credentials
+# =========================
+*.key
+*.pem
+credentials.json
