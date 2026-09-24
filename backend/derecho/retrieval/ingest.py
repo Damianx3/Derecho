@@ -11,13 +11,11 @@ import pymupdf
 
 # __file__ is the location of this ingest.py file.
 #
-# Our file is located here:
+# Our file is:
 # Derecho/backend/derecho/retrieval/ingest.py
 #
 # parents[3] moves up:
 # retrieval -> derecho -> backend -> Derecho
-#
-# This gives us the main Derecho project folder.
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
@@ -25,10 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 # FIND THE LEGAL PDF
 # ---------------------------------------------------------
 
-# Build the path to our NILC English legal document.
-#
-# Result:
-# Derecho/data/legal_sources/en/nilc_arrested_detained_en.pdf
+# Location of our English NILC legal document.
 PDF_PATH = (
     PROJECT_ROOT
     / "data"
@@ -44,17 +39,14 @@ PDF_PATH = (
 
 def clean_text(text):
     """
-    Clean text that was extracted from a PDF.
+    Clean text extracted from a PDF.
 
-    PDFs can contain extra spaces, new lines, and other
-    whitespace that we do not need for our search system.
+    PDF extraction can contain extra spaces, line breaks,
+    and other whitespace that we do not need.
     """
 
-    # text.split() separates the text wherever there is
-    # whitespace such as spaces, tabs, or new lines.
-    #
-    # " ".join(...) puts everything back together using
-    # one normal space between each piece.
+    # Split the text wherever there is whitespace,
+    # then join it back together using one normal space.
     #
     # Example:
     #
@@ -65,8 +57,65 @@ def clean_text(text):
     # "Know Your Rights"
     cleaned_text = " ".join(text.split())
 
-    # Send the cleaned text back to the program.
     return cleaned_text
+
+
+# ---------------------------------------------------------
+# SPLIT TEXT INTO CHUNKS
+# ---------------------------------------------------------
+
+def chunk_text(text, chunk_size=150, overlap=30):
+    """
+    Split text into smaller overlapping chunks.
+
+    chunk_size:
+        Maximum number of words in each chunk.
+
+    overlap:
+        Number of words from the previous chunk that
+        are repeated in the next chunk.
+
+    The overlap helps us avoid losing context between
+    two chunks.
+    """
+
+    # Turn the text into a list of words.
+    words = text.split()
+
+    # This list will contain our chunks.
+    chunks = []
+
+    # Start at the first word.
+    start = 0
+
+    # Continue until we reach the end of the text.
+    while start < len(words):
+
+        # Calculate where this chunk should end.
+        end = start + chunk_size
+
+        # Get the words for this chunk.
+        chunk_words = words[start:end]
+
+        # Join those words back into normal text.
+        chunk = " ".join(chunk_words)
+
+        # Save the chunk.
+        chunks.append(chunk)
+
+        # Move forward for the next chunk.
+        #
+        # With:
+        # chunk_size = 150
+        # overlap = 30
+        #
+        # Chunk 1 approximately contains words 1-150.
+        # Chunk 2 starts around word 121.
+        #
+        # That means 30 words overlap.
+        start += chunk_size - overlap
+
+    return chunks
 
 
 # ---------------------------------------------------------
@@ -75,65 +124,106 @@ def clean_text(text):
 
 def extract_pdf_text(pdf_path):
     """
-    Open a PDF and extract text from every page.
+    Open a PDF and extract cleaned text from every page.
 
-    Returns a list containing the page number
-    and cleaned text from each page.
+    Returns a list containing:
+    - page number
+    - cleaned page text
     """
 
     # Open the PDF using PyMuPDF.
     document = pymupdf.open(pdf_path)
 
-    # Show which PDF was opened.
     print(f"Opened: {pdf_path.name}")
-
-    # Show how many pages are in the PDF.
     print(f"Number of pages: {len(document)}")
 
-    # Create an empty list.
-    #
-    # We will store information about every page here.
+    # Store all extracted pages here.
     pages = []
 
     # Go through every page in the PDF.
-    #
-    # enumerate() gives us:
-    #
-    # page_number = 1, 2, 3...
-    # page = the actual PDF page
-    #
-    # start=1 means page numbering starts at 1
-    # instead of Python's normal starting value of 0.
     for page_number, page in enumerate(document, start=1):
 
-        # Extract the raw text from the current PDF page.
+        # Extract raw text.
         text = page.get_text()
 
-        # Clean unnecessary spaces and line breaks
-        # from the extracted text.
+        # Clean extra whitespace from the text.
         text = clean_text(text)
 
-        # Store the page number and cleaned text together.
-        #
-        # Example:
-        #
-        # {
-        #     "page": 1,
-        #     "text": "KNOW YOUR RIGHTS..."
-        # }
+        # Store the page number and cleaned text.
         pages.append({
             "page": page_number,
             "text": text
         })
 
-        # Show our progress in the Terminal.
         print(f"Extracted page {page_number}")
 
-    # Close the PDF after we finish reading it.
+    # Close the PDF when we're finished.
     document.close()
 
-    # Return all extracted pages.
     return pages
+
+
+# ---------------------------------------------------------
+# CREATE SEARCHABLE RAG CHUNKS
+# ---------------------------------------------------------
+
+def create_chunks(pages, source_id):
+    """
+    Turn extracted PDF pages into smaller searchable chunks.
+
+    Every chunk remembers:
+    - its unique chunk ID
+    - which legal source it came from
+    - which PDF page it came from
+    - the actual legal text
+
+    This information will be important later for
+    retrieval and citations.
+    """
+
+    # Store all chunks from the entire document here.
+    all_chunks = []
+
+    # Go through every extracted page.
+    for page in pages:
+
+        # Get the page number.
+        page_number = page["page"]
+
+        # Get the text from that page.
+        page_text = page["text"]
+
+        # Split the page into smaller chunks.
+        page_chunks = chunk_text(page_text)
+
+        # Show how many chunks this page created.
+        print(f"Page {page_number}: {len(page_chunks)} chunks")
+
+        # Go through every chunk from this page.
+        for chunk_number, chunk in enumerate(page_chunks, start=1):
+
+            # Create a unique ID for this chunk.
+            #
+            # Example:
+            #
+            # nilc_arrested_detained_en_p1_c1
+            #
+            # p1 = page 1
+            # c1 = chunk 1
+            chunk_id = (
+                f"{source_id}_p{page_number}_c{chunk_number}"
+            )
+
+            # Store the chunk and its metadata.
+            all_chunks.append({
+                "chunk_id": chunk_id,
+                "source_id": source_id,
+                "page": page_number,
+                "text": chunk
+            })
+
+    # Return every chunk from the document.
+    return all_chunks
 
 
 # ---------------------------------------------------------
@@ -142,58 +232,67 @@ def extract_pdf_text(pdf_path):
 
 def main():
 
-    # Make sure the PDF exists before trying to open it.
+    # Make sure our PDF exists before trying to open it.
     if not PDF_PATH.exists():
-
-        # Tell us where Python expected to find the PDF.
         print(f"PDF not found: {PDF_PATH}")
-
-        # Stop the program.
         return
 
-    # Extract and clean the text from the PDF.
-    #
-    # "pages" will contain a list like:
-    #
-    # [
-    #     {
-    #         "page": 1,
-    #         "text": "..."
-    #     },
-    #     {
-    #         "page": 2,
-    #         "text": "..."
-    #     }
-    # ]
+    # -----------------------------------------------------
+    # STEP 1: EXTRACT THE PDF
+    # -----------------------------------------------------
+
+    # Extract and clean text from all PDF pages.
     pages = extract_pdf_text(PDF_PATH)
 
-    # Make the Terminal output easier to read.
-    print("\n--- SAMPLE CLEANED TEXT ---")
 
-    # pages[0]
-    #     gets the first page.
-    #
-    # ["text"]
-    #     gets the text stored for that page.
-    #
-    # [:1000]
-    #     shows only the first 1000 characters.
-    #
-    # This lets us check whether extraction and
-    # cleaning worked correctly.
-    print(pages[0]["text"][:1000])
+    # -----------------------------------------------------
+    # STEP 2: IDENTIFY THE SOURCE
+    # -----------------------------------------------------
+
+    # This ID matches the document ID we placed
+    # in sources.json.
+    source_id = "nilc_arrested_detained_en"
+
+
+    # -----------------------------------------------------
+    # STEP 3: CREATE CHUNKS
+    # -----------------------------------------------------
+
+    # Turn the extracted pages into smaller
+    # searchable RAG chunks.
+    chunks = create_chunks(pages, source_id)
+
+
+    # -----------------------------------------------------
+    # STEP 4: SHOW RESULTS
+    # -----------------------------------------------------
+
+    # Show the total number of chunks created.
+    print(f"\nTotal chunks: {len(chunks)}")
+
+    # Make sure at least one chunk exists.
+    if not chunks:
+        print("No chunks were created.")
+        return
+
+    # Show the first chunk so we can verify
+    # that everything worked.
+    print("\n--- SAMPLE CHUNK ---")
+
+    print(f"Chunk ID: {chunks[0]['chunk_id']}")
+    print(f"Source: {chunks[0]['source_id']}")
+    print(f"Page: {chunks[0]['page']}")
+    print(f"Text: {chunks[0]['text']}")
 
 
 # ---------------------------------------------------------
 # START THE PROGRAM
 # ---------------------------------------------------------
 
-# When we run:
+# When this file is executed directly:
 #
 # python3 backend/derecho/retrieval/ingest.py
 #
-# Python sets __name__ to "__main__".
-#
-# That tells Python to run main().
+# run the main() function.
 if __name__ == "__main__":
     main()
