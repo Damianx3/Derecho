@@ -39,6 +39,37 @@ PDF_PATH = (
 
 
 # ---------------------------------------------------------
+# CLEAN EXTRACTED TEXT
+# ---------------------------------------------------------
+
+def clean_text(text):
+    """
+    Clean text that was extracted from a PDF.
+
+    PDFs can contain extra spaces, new lines, and other
+    whitespace that we do not need for our search system.
+    """
+
+    # text.split() separates the text wherever there is
+    # whitespace such as spaces, tabs, or new lines.
+    #
+    # " ".join(...) puts everything back together using
+    # one normal space between each piece.
+    #
+    # Example:
+    #
+    # "Know   Your\nRights"
+    #
+    # becomes:
+    #
+    # "Know Your Rights"
+    cleaned_text = " ".join(text.split())
+
+    # Send the cleaned text back to the program.
+    return cleaned_text
+
+
+# ---------------------------------------------------------
 # EXTRACT TEXT FROM PDF
 # ---------------------------------------------------------
 
@@ -47,7 +78,7 @@ def extract_pdf_text(pdf_path):
     Open a PDF and extract text from every page.
 
     Returns a list containing the page number
-    and text from each page.
+    and cleaned text from each page.
     """
 
     # Open the PDF using PyMuPDF.
@@ -61,30 +92,34 @@ def extract_pdf_text(pdf_path):
 
     # Create an empty list.
     #
-    # We will put the text from every page
-    # into this list.
+    # We will store information about every page here.
     pages = []
 
     # Go through every page in the PDF.
     #
     # enumerate() gives us:
-    # - page_number = 1, 2, 3, etc.
-    # - page = the actual PDF page
     #
-    # start=1 means we start counting at page 1
-    # instead of Python's normal starting number of 0.
+    # page_number = 1, 2, 3...
+    # page = the actual PDF page
+    #
+    # start=1 means page numbering starts at 1
+    # instead of Python's normal starting value of 0.
     for page_number, page in enumerate(document, start=1):
 
-        # Extract text from the current page.
+        # Extract the raw text from the current PDF page.
         text = page.get_text()
 
-        # Store the page number and its text together.
+        # Clean unnecessary spaces and line breaks
+        # from the extracted text.
+        text = clean_text(text)
+
+        # Store the page number and cleaned text together.
         #
         # Example:
         #
         # {
         #     "page": 1,
-        #     "text": "Know Your Rights..."
+        #     "text": "KNOW YOUR RIGHTS..."
         # }
         pages.append({
             "page": page_number,
@@ -94,10 +129,10 @@ def extract_pdf_text(pdf_path):
         # Show our progress in the Terminal.
         print(f"Extracted page {page_number}")
 
-    # Close the PDF when we are finished with it.
+    # Close the PDF after we finish reading it.
     document.close()
 
-    # Return all of the extracted pages.
+    # Return all extracted pages.
     return pages
 
 
@@ -107,37 +142,45 @@ def extract_pdf_text(pdf_path):
 
 def main():
 
-    # Check if the PDF actually exists before
-    # trying to open it.
+    # Make sure the PDF exists before trying to open it.
     if not PDF_PATH.exists():
 
-        # If Python cannot find it, print the location
-        # where it expected the PDF to be.
+        # Tell us where Python expected to find the PDF.
         print(f"PDF not found: {PDF_PATH}")
 
         # Stop the program.
         return
 
-    # Call our extraction function.
+    # Extract and clean the text from the PDF.
     #
-    # The results are stored in "pages".
+    # "pages" will contain a list like:
+    #
+    # [
+    #     {
+    #         "page": 1,
+    #         "text": "..."
+    #     },
+    #     {
+    #         "page": 2,
+    #         "text": "..."
+    #     }
+    # ]
     pages = extract_pdf_text(PDF_PATH)
 
-    # Print a heading to make the Terminal
-    # output easier to read.
-    print("\n--- SAMPLE TEXT ---")
+    # Make the Terminal output easier to read.
+    print("\n--- SAMPLE CLEANED TEXT ---")
 
-    # pages[0] means:
-    # Get the FIRST page from our list.
+    # pages[0]
+    #     gets the first page.
     #
-    # ["text"] means:
-    # Get the text from that page.
+    # ["text"]
+    #     gets the text stored for that page.
     #
-    # [:1000] means:
-    # Only print the first 1000 characters.
+    # [:1000]
+    #     shows only the first 1000 characters.
     #
-    # We're doing this just to verify that
-    # text extraction worked correctly.
+    # This lets us check whether extraction and
+    # cleaning worked correctly.
     print(pages[0]["text"][:1000])
 
 
@@ -151,7 +194,6 @@ def main():
 #
 # Python sets __name__ to "__main__".
 #
-# This tells Python to start our program
-# by running the main() function.
+# That tells Python to run main().
 if __name__ == "__main__":
-    main() #need spanish verison 
+    main()
