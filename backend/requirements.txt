@@ -1,3 +1,9 @@
 # DERECHO Python dependencies
 #
 # Dependencies will be added as components are implemented.
+sherpa-onnx
+sounddevice
+numpy
+soundfile
+pynput
+ 
