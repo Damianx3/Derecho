@@ -1,3 +1,4 @@
 # DERECHO Python dependencies
-#
-# Dependencies will be added as components are implemented.
+
+# PDF text extraction for legal RAG
+PyMuPDF
