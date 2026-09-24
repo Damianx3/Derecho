@@ -7,3 +7,6 @@ numpy
 soundfile
 pynput
  
+
+# PDF text extraction for legal RAG
+PyMuPDF

@@ -1,0 +1,29 @@
+[
+    {
+      "id": "aclu_immigrants_rights_en",
+      "organization": "American Civil Liberties Union",
+      "title": "Immigrants' Rights",
+      "language": "en",
+      "publication_date": null,
+      "source_url": "https://www.aclu.org/know-your-rights/immigrants-rights",
+      "local_file": null
+    },
+    {
+      "id": "nilc_arrested_detained_en",
+      "organization": "National Immigration Law Center",
+      "title": "What to Do if You Are Arrested or Detained by Immigration",
+      "language": "en",
+      "publication_date": null,
+      "source_url": "https://www.nilc.org/resources/know-your-rights-what-to-do-if-arrested-detained-immigration/",
+      "local_file": "en/nilc_arrested_detained_en.pdf"
+    },
+    {
+      "id": "nilc_arrested_detained_es",
+      "organization": "National Immigration Law Center",
+      "title": "Qué puede hacer si usted es arrestado o detenido por Inmigración",
+      "language": "es",
+      "publication_date": null,
+      "source_url": "https://www.nilc.org/resources/conozca-sus-derechos-si-usted-es-arrestado-detenido-inmigracion/",
+      "local_file": null
+    }
+  ]
