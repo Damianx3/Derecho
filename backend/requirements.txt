@@ -2,3 +2,6 @@
 
 # PDF text extraction for legal RAG
 PyMuPDF
+
+# BM25 keyword retrieval for legal RAG
+rank-bm25
