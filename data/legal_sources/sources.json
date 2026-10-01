@@ -25,5 +25,50 @@
       "publication_date": null,
       "source_url": "https://www.nilc.org/resources/conozca-sus-derechos-si-usted-es-arrestado-detenido-inmigracion/",
       "local_file": null
+    },
+    {
+      "id": "nilc_constitutional_rights_en",
+      "organization": "National Immigration Law Center",
+      "title": "Know Your Rights Under the U.S. Constitution – No Matter Who Is President",
+      "language": "en",
+      "publication_date": "2025-01",
+      "source_url": "https://www.nilc.org/resources/everyone-has-certain-basic-rights/",
+      "local_file": "en/nilc_constitutional_rights_en.pdf"
+    },
+    {
+      "id": "nilc_constitutional_rights_es",
+      "organization": "National Immigration Law Center",
+      "title": "Conozca sus derechos bajo la Constitución de EE. UU., sea quien sea el presidente",
+      "language": "es",
+      "publication_date": "2024",
+      "source_url": "https://www.nilc.org/resources/todos-tienen-derechos-basicos/",
+      "local_file": "es/nilc_constitutional_rights_es.pdf"
+    },
+    {
+      "id": "nilc_know_your_rights_en",
+      "organization": "National Immigration Law Center",
+      "title": "Know Your Rights",
+      "language": "en",
+      "publication_date": "2024",
+      "source_url": "https://media.nilc.org/wp-content/uploads/2024/10/NILC_KnowYourRights-ENG.pdf",
+      "local_file": "en/nilc_know_your_rights_en.pdf"
+    },
+    {
+      "id": "nijc_encounter_ice_en",
+      "organization": "National Immigrant Justice Center",
+      "title": "Know Your Rights: If You Encounter ICE",
+      "language": "en",
+      "publication_date": "2024-11-22",
+      "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+      "local_file": "en/nijc_encounter_ice_en.pdf"
+    },
+    {
+      "id": "nijc_encounter_ice_es",
+      "organization": "National Immigrant Justice Center",
+      "title": "Conozca Sus Derechos: Si Se Encuentra Con ICE",
+      "language": "es",
+      "publication_date": "2024-11-22",
+      "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+      "local_file": "es/nijc_encounter_ice_es.pdf"
     }
   ]
