@@ -52,5 +52,14 @@
       "publication_date": "2024",
       "source_url": "https://media.nilc.org/wp-content/uploads/2024/10/NILC_KnowYourRights-ENG.pdf",
       "local_file": "en/nilc_know_your_rights_en.pdf"
+    },
+    {
+      "id": "nijc_encounter_ice_en",
+      "organization": "National Immigrant Justice Center",
+      "title": "Know Your Rights: If You Encounter ICE",
+      "language": "en",
+      "publication_date": "2024-11-22",
+      "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+      "local_file": "en/nijc_encounter_ice_en.pdf"
     }
   ]
