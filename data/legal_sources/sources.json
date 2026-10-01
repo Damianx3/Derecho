@@ -61,5 +61,14 @@
       "publication_date": "2024-11-22",
       "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
       "local_file": "en/nijc_encounter_ice_en.pdf"
+    },
+    {
+      "id": "nijc_encounter_ice_es",
+      "organization": "National Immigrant Justice Center",
+      "title": "Conozca Sus Derechos: Si Se Encuentra Con ICE",
+      "language": "es",
+      "publication_date": "2024-11-22",
+      "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+      "local_file": "es/nijc_encounter_ice_es.pdf"
     }
   ]
