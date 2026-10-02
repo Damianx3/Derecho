@@ -2,21 +2,8 @@
 # IMPORTS
 # ---------------------------------------------------------
 
-# json lets Python read JSON files.
-#
-# We need it because ingest.py created:
-# data/legal_sources/chunks.json
 import json
-
-
-# Path lets us work with file and folder locations.
 from pathlib import Path
-
-
-# BM25Okapi is the BM25 keyword-search algorithm.
-#
-# We will use it to compare a user's question against
-# our legal-document chunks.
 from rank_bm25 import BM25Okapi
 
 
@@ -24,15 +11,10 @@ from rank_bm25 import BM25Okapi
 # FIND THE DERECHO PROJECT FOLDER
 # ---------------------------------------------------------
 
-# This file is located at:
-#
+# bm25.py is located at:
 # Derecho/backend/derecho/retrieval/bm25.py
 #
-# parents[3] moves up:
-#
-# retrieval -> derecho -> backend -> Derecho
-#
-# This gives us the main Derecho project folder.
+# parents[3] gives us the Derecho project folder.
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
@@ -40,17 +22,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 # FIND chunks.json
 # ---------------------------------------------------------
 
-# ingest.py created chunks.json after:
-#
-# 1. Opening the legal PDF
-# 2. Extracting the text
-# 3. Cleaning the text
-# 4. Splitting the text into chunks
-# 5. Adding source and page metadata
-#
-# The final path is:
-#
-# Derecho/data/legal_sources/chunks.json
 CHUNKS_PATH = (
     PROJECT_ROOT
     / "data"
@@ -65,23 +36,12 @@ CHUNKS_PATH = (
 
 def load_chunks(chunks_path):
     """
-    Load our processed legal chunks from chunks.json.
-
-    Returns a Python list containing all legal chunks.
+    Load processed legal chunks from chunks.json.
     """
 
-    # Open chunks.json in read mode.
-    #
-    # "r" means we are reading the file.
-    #
-    # UTF-8 lets us correctly read English, Spanish,
-    # and special characters.
     with open(chunks_path, "r", encoding="utf-8") as file:
-
-        # Convert the JSON data into Python data.
         chunks = json.load(file)
 
-    # Give the list of chunks back to the program.
     return chunks
 
 
@@ -91,99 +51,21 @@ def load_chunks(chunks_path):
 
 def tokenize(text):
     """
-    Convert text into clean lowercase word tokens.
-
-    BM25 searches using these tokens.
-
-    Example:
-
-    "What should I do if ICE comes to my home?"
-
-    becomes:
-
-    [
-        "what",
-        "should",
-        "i",
-        "do",
-        "if",
-        "ice",
-        "comes",
-        "to",
-        "my",
-        "home"
-    ]
+    Convert text into lowercase word tokens for BM25.
     """
 
-    # Convert all letters to lowercase.
-    #
-    # This means:
-    #
-    # ICE
-    # Ice
-    # ice
-    #
-    # will all become:
-    #
-    # ice
+    # Make everything lowercase.
     text = text.lower()
 
-
-    # -----------------------------------------------------
-    # REMOVE PUNCTUATION
-    # -----------------------------------------------------
-
-    # These are punctuation characters that we do not
-    # want BM25 to consider part of a word.
-    #
-    # For example:
-    #
-    # home?
-    #
-    # should become:
-    #
-    # home
+    # Remove common punctuation.
     punctuation = ".,!?;:()[]{}\"'"
 
-
-    # Go through each punctuation character.
     for character in punctuation:
-
-        # Replace that punctuation character with nothing.
-        #
-        # Example:
-        #
-        # "home?"
-        #
-        # becomes:
-        #
-        # "home"
         text = text.replace(character, "")
 
-
-    # -----------------------------------------------------
-    # SPLIT TEXT INTO WORDS
-    # -----------------------------------------------------
-
-    # split() separates the text wherever there
-    # is whitespace.
-    #
-    # Example:
-    #
-    # "ice came to my home"
-    #
-    # becomes:
-    #
-    # [
-    #     "ice",
-    #     "came",
-    #     "to",
-    #     "my",
-    #     "home"
-    # ]
+    # Split the text into words.
     tokens = text.split()
 
-    # Return the finished list of words.
     return tokens
 
 
@@ -193,45 +75,58 @@ def tokenize(text):
 
 def build_bm25(chunks):
     """
-    Build a BM25 search index from our legal chunks.
-
-    BM25 will eventually use this index to rank chunks
-    according to how closely they match a user's question.
+    Build a BM25 search index from the legal chunks.
     """
 
-    # This list will contain a tokenized version
-    # of every legal chunk.
     tokenized_corpus = []
 
-
-    # Go through every legal chunk.
+    # Tokenize every legal chunk.
     for chunk in chunks:
-
-        # Get the legal text stored in the chunk.
         text = chunk["text"]
-
-        # Convert the text into clean word tokens.
         tokens = tokenize(text)
-
-        # Add those tokens to our corpus.
         tokenized_corpus.append(tokens)
 
-
-    # -----------------------------------------------------
-    # CREATE THE BM25 INDEX
-    # -----------------------------------------------------
-
-    # Give all of our tokenized legal chunks to BM25.
-    #
-    # BM25 analyzes the words that appear throughout
-    # the collection.
-    #
-    # Later, we will give BM25 a user's question and
-    # ask it which chunks are the best matches.
+    # Create the BM25 index.
     bm25 = BM25Okapi(tokenized_corpus)
 
-    # Return the finished BM25 search index.
     return bm25
+
+
+# ---------------------------------------------------------
+# SEARCH LEGAL CHUNKS
+# ---------------------------------------------------------
+
+def search_chunks(query, chunks, bm25, top_k=5):
+    """
+    Search the legal chunks using BM25.
+
+    Returns the best matching chunks along with
+    their BM25 scores.
+    """
+
+    # Tokenize the user's question.
+    query_tokens = tokenize(query)
+
+    # Score every chunk.
+    scores = bm25.get_scores(query_tokens)
+
+    results = []
+
+    # Match every score with its original chunk.
+    for index, score in enumerate(scores):
+        results.append({
+            "score": float(score),
+            "chunk": chunks[index]
+        })
+
+    # Highest BM25 score should come first.
+    results.sort(
+        key=lambda result: result["score"],
+        reverse=True
+    )
+
+    # Return only the best results.
+    return results[:top_k]
 
 
 # ---------------------------------------------------------
@@ -240,30 +135,22 @@ def build_bm25(chunks):
 
 def main():
     """
-    Main starting point for our BM25 retrieval program.
+    Test the legal BM25 retrieval system.
 
-    Right now this program:
+    This program:
 
-    1. Loads our legal chunks
-    2. Tokenizes them
-    3. Builds the BM25 search index
-    4. Tests our tokenizer
-
-    Next we will make it actually search the chunks.
+    1. Loads chunks.json
+    2. Builds the BM25 index
+    3. Searches the legal chunks
+    4. Displays the top matching results
     """
-
 
     # -----------------------------------------------------
     # CHECK FOR chunks.json
     # -----------------------------------------------------
 
-    # Before opening chunks.json, make sure it exists.
     if not CHUNKS_PATH.exists():
-
-        # Show where Python expected to find the file.
         print(f"Chunks file not found: {CHUNKS_PATH}")
-
-        # Stop the program.
         return
 
 
@@ -271,12 +158,9 @@ def main():
     # LOAD LEGAL CHUNKS
     # -----------------------------------------------------
 
-    # Load the chunks created by ingest.py.
     chunks = load_chunks(CHUNKS_PATH)
 
-    # Show how many chunks were loaded.
-    #
-    # Right now we expect 28.
+    # The number changes as more legal PDFs are added.
     print(f"Loaded {len(chunks)} legal chunks.")
 
 
@@ -284,80 +168,59 @@ def main():
     # BUILD BM25 INDEX
     # -----------------------------------------------------
 
-    # Send our 28 chunks to build_bm25().
-    #
-    # The process looks like:
-    #
-    # legal chunks
-    #      ↓
-    # tokenize text
-    #      ↓
-    # tokenized corpus
-    #      ↓
-    # BM25 index
     bm25 = build_bm25(chunks)
 
-    # If we reached this point without an error,
-    # the BM25 index was successfully created.
     print("BM25 search index created successfully.")
 
 
     # -----------------------------------------------------
-    # TEST OUR TOKENIZER
+    # TEST BM25 SEARCH
     # -----------------------------------------------------
 
-    # Create a sample question.
-    #
-    # Later, instead of using a hard-coded question,
-    # the user will be able to enter their own question.
     test_question = "What should I do if ICE comes to my home?"
 
+    print("\n--- BM25 SEARCH TEST ---")
+    print(f"Question: {test_question}")
 
-    # Convert the question into clean tokens.
-    tokenized_question = tokenize(test_question)
 
+    # Search for the five best matching chunks.
+    results = search_chunks(
+        test_question,
+        chunks,
+        bm25,
+        top_k=5
+    )
 
-    # Show the results.
-    print("\n--- TOKENIZATION TEST ---")
-
-    print(f"Original: {test_question}")
-
-    print(f"Tokens: {tokenized_question}")
+    print(f"\nTop {len(results)} results:")
 
 
     # -----------------------------------------------------
-    # SHOW FIRST LEGAL CHUNK
+    # DISPLAY RESULTS
     # -----------------------------------------------------
 
-    # Make sure at least one chunk exists.
-    if chunks:
+    for number, result in enumerate(results, start=1):
 
-        print("\n--- FIRST CHUNK ---")
+        chunk = result["chunk"]
+        score = result["score"]
 
-        # Show the unique chunk ID.
-        print(f"Chunk ID: {chunks[0]['chunk_id']}")
+        print("\n" + "=" * 60)
+        print(f"RESULT {number}")
+        print("=" * 60)
 
-        # Show which legal source it came from.
-        print(f"Source: {chunks[0]['source_id']}")
+        print(f"Score: {score:.4f}")
+        print(f"Chunk ID: {chunk['chunk_id']}")
+        print(f"Source: {chunk['source_id']}")
+        print(f"Page: {chunk['page']}")
 
-        # Show which page of the PDF it came from.
-        print(f"Page: {chunks[0]['page']}")
+        print("\nText:")
 
-        # Show only the first 500 characters so our
-        # Terminal output does not become too large.
-        print(f"Text: {chunks[0]['text'][:500]}")
+        # Limit output so the terminal does not get too large.
+        print(chunk["text"][:1000])
 
 
 # ---------------------------------------------------------
 # START PROGRAM
 # ---------------------------------------------------------
 
-# When we run:
-#
-# python3 backend/derecho/retrieval/bm25.py
-#
-# Python sets __name__ to "__main__".
-#
-# This tells Python to start our main() function.
 if __name__ == "__main__":
     main()
