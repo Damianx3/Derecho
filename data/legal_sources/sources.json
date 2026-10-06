@@ -24,7 +24,7 @@
       "language": "es",
       "publication_date": null,
       "source_url": "https://www.nilc.org/resources/conozca-sus-derechos-si-usted-es-arrestado-detenido-inmigracion/",
-      "local_file": null
+      "local_file": "es/nilc_arrested_detained_es.pdf"
     },
     {
       "id": "nilc_constitutional_rights_en",
@@ -70,5 +70,23 @@
       "publication_date": "2024-11-22",
       "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
       "local_file": "es/nijc_encounter_ice_es.pdf"
+    },
+    {
+      "id": "nilc_noncitizen_registry_en",
+      "organization": "National Immigration Law Center",
+      "title": "Know Your Rights: Noncitizen Registry",
+      "language": "en",
+      "publication_date": "2025-03-10",
+      "source_url": "https://www.nilc.org/resources/know-your-rights-trumps-registration-requirement-for-immigrants/",
+      "local_file": "en/nilc_noncitizen_registry_en.pdf"
+    },
+    {
+      "id": "nilc_protecting_students_families_en",
+      "organization": "National Immigration Law Center",
+      "title": "Protecting Our Students and Families",
+      "language": "en",
+      "publication_date": null,
+      "source_url": "https://www.nilc.org/resources/protecting-our-students-and-families/",
+      "local_file": "en/nilc_protecting_students_families_en.pdf"
     }
   ]
