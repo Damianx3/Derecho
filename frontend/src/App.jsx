@@ -6,6 +6,7 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState('START');
   const [isRecording, setIsRecording] = useState(false);
   const [activeSpeaker, setActiveSpeaker] = useState(1);
+  const [touchDebug, setTouchDebug] = useState('NO EVENT');
 
   // Audio & Volume Modal States
   const [volume, setVolume] = useState(80); // 0 to 100
@@ -91,35 +92,97 @@ export default function App() {
     setTargetLanguage(temp);
   };
 
-  // Simulate finishes speaking and adds messages to chat history
-  const handleMicRelease = () => {
-    if (isRecording) {
-      setIsRecording(false);
-      setCurrentScreen('PROCESSING');
+  const getLanguageCode = (languageName) => {
+    const codes = {
+      English: 'en',
+      Spanish: 'es'
+    };
 
-      const isSpeakerOne = activeSpeaker === 1;
-      const speakerLabel = isSpeakerOne ? `Speaker 1 (${language})` : `Speaker 2 (${targetLanguage})`;
-      const sampleOriginal = isSpeakerOne ? "Hello, I need help with my document." : "Hola, puedo ayudarte con eso.";
-      const sampleTranslated = isSpeakerOne ? "Hola, necesito ayuda con mi documento." : "Hello, I can help you with that.";
+    return codes[languageName];
+  };
+
+  const handleMicPress = async () => {
+    try {
+      setIsRecording(true);
+
+      const response = await fetch(
+        'http://127.0.0.1:8000/api/record/start',
+        {
+          method: 'POST'
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Start recording failed: ${response.status}`);
+      }
+    } catch (error) {
+      console.error(error);
+      setIsRecording(false);
+    }
+  };
+
+  const handleMicToggle = async () => {
+    if (isRecording) {
+      await handleMicRelease();
+    } else {
+      await handleMicPress();
+    }
+  };
+
+  const handleMicRelease = async () => {
+    setIsRecording(false);
+    setCurrentScreen('PROCESSING');
+
+    const isSpeakerOne = activeSpeaker === 1;
+
+    const sourceLanguage = isSpeakerOne
+      ? language
+      : targetLanguage;
+
+    const destinationLanguage = isSpeakerOne
+      ? targetLanguage
+      : language;
+
+    try {
+      const response = await fetch(
+        'http://127.0.0.1:8000/api/record/stop',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            source_language_code: getLanguageCode(sourceLanguage),
+            source_language_name: sourceLanguage,
+            target_language_name: destinationLanguage
+          })
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Translation failed: ${response.status}`);
+      }
+
+      const result = await response.json();
 
       const newBubbles = {
         id: Date.now(),
         speaker: activeSpeaker,
-        speakerLabel: speakerLabel,
-        originalText: sampleOriginal,
-        translatedText: sampleTranslated
+        speakerLabel: `Speaker ${activeSpeaker} (${sourceLanguage})`,
+        originalText: result.transcript,
+        translatedText: result.translation
       };
 
-      // Simulated AI processing time (1.8s)
-      setTimeout(() => {
-        setMessages((prev) => [...prev, newBubbles]);
-        setCurrentScreen('RESULTS');
-      }, 1800);
+      setMessages((prev) => [...prev, newBubbles]);
+      setCurrentScreen('RESULTS');
+
+    } catch (error) {
+      console.error(error);
+      setCurrentScreen('TRANSLATION');
     }
   };
 
   const handleTakeTurn = () => {
-    handleSwapLanguages();
     setActiveSpeaker(activeSpeaker === 1 ? 2 : 1);
     setCurrentScreen('TRANSLATION');
   };
@@ -182,9 +245,6 @@ export default function App() {
             >
               <option value="English">English</option>
               <option value="Spanish">Español (Spanish)</option>
-              <option value="French">Français (French)</option>
-              <option value="Kinyarwanda">Kinyarwanda</option>
-              <option value="Arabic">العربية (Arabic)</option>
             </select>
           </div>
 
@@ -270,10 +330,7 @@ export default function App() {
               >
                 <option value="English">English</option>
                 <option value="Spanish">Español</option>
-                <option value="French">Français</option>
-                <option value="Kinyarwanda">Kinyarwanda</option>
-                <option value="Arabic">العربية</option>
-              </select>
+                </select>
             </div>
 
             <button
@@ -288,6 +345,8 @@ export default function App() {
                 fontSize: '1.1rem',
                 fontWeight: 'bold',
                 cursor: 'pointer',
+                touchAction: 'none',
+                userSelect: 'none',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -319,19 +378,21 @@ export default function App() {
               >
                 <option value="Spanish">Español</option>
                 <option value="English">English</option>
-                <option value="French">Français</option>
-                <option value="Kinyarwanda">Kinyarwanda</option>
-                <option value="Arabic">العربية</option>
-              </select>
+                </select>
             </div>
           </div>
 
           <div style={{ marginTop: '12px', textAlign: 'center' }}>
             <button
-              onMouseDown={() => setIsRecording(true)}
-              onMouseUp={handleMicRelease}
-              onTouchStart={() => setIsRecording(true)}
-              onTouchEnd={handleMicRelease}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                handleMicPress();
+              }}
+              onMouseUp={(e) => {
+                e.preventDefault();
+                handleMicRelease();
+              }}
+              onContextMenu={(e) => e.preventDefault()}
               style={{
                 width: '100%',
                 minHeight: '170px',
@@ -356,7 +417,7 @@ export default function App() {
                 {isRecording ? 'Listening...' : 'Hold to Speak'}
               </div>
               <div style={{ fontSize: '0.8rem', fontWeight: '600', opacity: 0.8 }}>
-                {isRecording ? 'Release to translate' : 'Press and hold down to record audio'}
+                {isRecording ? 'Release to translate' : 'Press and hold to record'}
               </div>
             </button>
           </div>

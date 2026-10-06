@@ -1,3 +1,5 @@
 # DERECHO Python dependencies
 #
 # Dependencies will be added as components are implemented.
+fastapi
+uvicorn
