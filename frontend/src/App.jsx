@@ -15,6 +15,11 @@ export default function App() {
   // Chat History
   const [messages, setMessages] = useState([]);
 
+  // Legal Rights Specific States
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+  const [legalQueryText, setLegalQueryText] = useState('');
+  const [legalAnswerText, setLegalAnswerText] = useState('');
+
   // Common Layout Styles
   const containerStyle = {
     backgroundColor: '#fffbeb', // Eggshell yellow
@@ -78,9 +83,6 @@ export default function App() {
         zIndex: 10
       }}
     >
-      <span style={{ fontSize: '1.3rem', fontWeight: '900', lineHeight: '1' }}>
-        {'\u2B05'}
-      </span>
       Back
     </button>
   );
@@ -115,6 +117,23 @@ export default function App() {
         setMessages((prev) => [...prev, newBubbles]);
         setCurrentScreen('RESULTS');
       }, 1800);
+    }
+  };
+
+  // Handles mic release on Legal Rights mode specifically
+  const handleLegalMicRelease = () => {
+    if (isRecording) {
+      setIsRecording(false);
+      setCurrentScreen('LEGAL_PROCESSING');
+
+      // Sample placeholders for prompt & response
+      setLegalQueryText("What are my rights if law enforcement stops me on the street or asks for identification?");
+      setLegalAnswerText("You have the right to remain silent. You do not have to answer questions about where you were born, whether you are a U.S. citizen, or how you entered the country. You may ask 'Am I free to go?' If yes, you may calmly walk away.");
+
+      // Simulated AI processing time
+      setTimeout(() => {
+        setCurrentScreen('LEGAL_RESPONSE');
+      }, 2000);
     }
   };
 
@@ -198,7 +217,7 @@ export default function App() {
                   Two-way real-time speech translation
                 </div>
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#78716c' }}>SELECT ➔</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#78716c' }}>SELECT</div>
             </button>
 
             <button onClick={() => setCurrentScreen('LEGAL_RIGHTS')} style={buttonStyle}>
@@ -210,7 +229,7 @@ export default function App() {
                   Inform or be informed regarding legal protections
                 </div>
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#78716c' }}>SELECT ➔</div>
+              <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#78716c' }}>SELECT</div>
             </button>
           </div>
 
@@ -285,7 +304,7 @@ export default function App() {
                 borderRadius: '50%',
                 width: '38px',
                 height: '38px',
-                fontSize: '1.1rem',
+                fontSize: '0.9rem',
                 fontWeight: 'bold',
                 cursor: 'pointer',
                 display: 'flex',
@@ -295,7 +314,7 @@ export default function App() {
                 marginTop: '16px'
               }}
             >
-              ⇆
+              ⇄
             </button>
 
             <div style={{ flex: 1 }}>
@@ -351,7 +370,6 @@ export default function App() {
                 gap: '8px'
               }}
             >
-              <div style={{ fontSize: '2.6rem' }}>🎙️</div>
               <div style={{ fontSize: '1.3rem', fontWeight: '800', textTransform: 'uppercase' }}>
                 {isRecording ? 'Listening...' : 'Hold to Speak'}
               </div>
@@ -367,7 +385,7 @@ export default function App() {
   }
 
   // -------------------------------------------------------------
-  // SCREEN 3: PROCESSING SCREEN
+  // SCREEN 3: PROCESSING SCREEN (TRANSLATION)
   // -------------------------------------------------------------
   if (currentScreen === 'PROCESSING') {
     return (
@@ -441,7 +459,7 @@ export default function App() {
               gap: '6px'
             }}
           >
-            <span>{isMuted || volume === 0 ? '🔇' : volume < 50 ? '🔉' : '🔊'}</span>
+            <span>Volume:</span>
             <span>{isMuted ? 'Muted' : `${volume}%`}</span>
           </button>
 
@@ -464,7 +482,7 @@ export default function App() {
           </button>
         </div>
 
-        {/* --- POPUP TOUCH VOLUME PANEL FOR 4.3" SCREEN --- */}
+        {/* --- POPUP TOUCH VOLUME PANEL FOR SCREEN --- */}
         {showVolumeModal && (
           <div style={{
             position: 'absolute',
@@ -480,7 +498,6 @@ export default function App() {
             alignItems: 'center',
             gap: '10px'
           }}>
-            {/* Big Minus Button */}
             <button
               onClick={() => adjustVolume(-10)}
               style={{
@@ -500,12 +517,10 @@ export default function App() {
               -
             </button>
 
-            {/* Current Level Display */}
             <div style={{ fontSize: '1rem', fontWeight: '800', minWidth: '48px', textAlign: 'center' }}>
               {isMuted ? '0%' : `${volume}%`}
             </div>
 
-            {/* Big Plus Button */}
             <button
               onClick={() => adjustVolume(10)}
               style={{
@@ -525,7 +540,6 @@ export default function App() {
               +
             </button>
 
-            {/* Big Mute Toggle */}
             <button
               onClick={() => setIsMuted(!isMuted)}
               style={{
@@ -570,7 +584,6 @@ export default function App() {
                   width: '100%'
                 }}
               >
-                {/* Speaker Label */}
                 <div style={{
                   fontSize: '0.7rem',
                   fontWeight: '800',
@@ -581,7 +594,6 @@ export default function App() {
                   {item.speakerLabel}
                 </div>
 
-                {/* Original Speech Bubble */}
                 <div style={{
                   maxWidth: '85%',
                   backgroundColor: isSpeakerOne ? '#ffffff' : '#292524',
@@ -597,7 +609,6 @@ export default function App() {
                   {item.originalText}
                 </div>
 
-                {/* Translated Speech Bubble */}
                 <div style={{
                   maxWidth: '85%',
                   backgroundColor: isSpeakerOne ? '#fef08a' : '#3b82f6',
@@ -632,7 +643,6 @@ export default function App() {
           margin: '0 auto',
           boxSizing: 'border-box'
         }}>
-          {/* Bottom Left: Replay AI Voice */}
           <button
             onClick={() => alert(`Replaying AI voice at ${isMuted ? 0 : volume}% volume...`)}
             style={{
@@ -644,16 +654,12 @@ export default function App() {
               fontSize: '0.85rem',
               fontWeight: '800',
               cursor: 'pointer',
-              boxShadow: '0 3px 0px #292524',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px'
+              boxShadow: '0 3px 0px #292524'
             }}
           >
-            🔊 Replay
+            Replay
           </button>
 
-          {/* Bottom Center: Take Turn */}
           <button
             onClick={handleTakeTurn}
             style={{
@@ -670,10 +676,9 @@ export default function App() {
               textAlign: 'center'
             }}
           >
-            Take Turn ⇆
+            Take Turn
           </button>
 
-          {/* Bottom Right: Speak Again */}
           <button
             onClick={handleSpeakAgain}
             style={{
@@ -688,7 +693,7 @@ export default function App() {
               boxShadow: '0 3px 0px #292524'
             }}
           >
-            Speak Again 🎙️
+            Speak Again
           </button>
         </div>
 
@@ -696,11 +701,365 @@ export default function App() {
     );
   }
 
-  // Placeholder for Legal Rights Screen
-  return (
-    <div style={containerStyle}>
-      {renderBackButton('START')}
-      <h2>Legal Rights Mode Screen Coming Soon!</h2>
-    </div>
-  );
+  // -------------------------------------------------------------
+  // SCREEN 5: LEGAL RIGHTS MODE (MAIN RECORDING & DISCLAIMER)
+  // -------------------------------------------------------------
+  if (currentScreen === 'LEGAL_RIGHTS') {
+    return (
+      <div style={containerStyle}>
+        {renderBackButton('START')}
+
+        <div style={contentStyle}>
+          <header style={{ textAlign: 'center', marginTop: '20px' }}>
+            <h1 style={{ fontSize: '1.8rem', fontWeight: '800', color: '#1c1917', margin: '0 0 2px 0' }}>
+              Legal Rights Mode
+            </h1>
+            <p style={{ color: '#57534e', fontSize: '0.9rem', margin: 0, fontWeight: '500' }}>
+              Ask legal questions in {language}
+            </p>
+          </header>
+
+          {/* Disclaimer Button Trigger */}
+          <button
+            onClick={() => setShowDisclaimer(true)}
+            style={{
+              width: '100%',
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '3px solid #292524',
+              borderRadius: '14px',
+              padding: '12px 16px',
+              fontSize: '1rem',
+              fontWeight: '800',
+              cursor: 'pointer',
+              boxShadow: '0 4px 0px #292524',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            Disclaimer (Read First)
+          </button>
+
+          {/* Main Hold-To-Record Audio Button */}
+          <div style={{ marginTop: '8px', textAlign: 'center' }}>
+            <button
+              onMouseDown={() => setIsRecording(true)}
+              onMouseUp={handleLegalMicRelease}
+              onTouchStart={() => setIsRecording(true)}
+              onTouchEnd={handleLegalMicRelease}
+              style={{
+                width: '100%',
+                minHeight: '190px',
+                backgroundColor: isRecording ? '#ef4444' : '#ffffff',
+                color: isRecording ? '#ffffff' : '#1c1917',
+                border: '4px solid #292524',
+                borderRadius: '24px',
+                padding: '20px',
+                cursor: 'pointer',
+                boxShadow: isRecording ? '0 0px 0px #292524' : '0 6px 0px #292524',
+                transform: isRecording ? 'translateY(6px)' : 'none',
+                transition: 'all 0.1s ease',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px'
+              }}
+            >
+              <div style={{ fontSize: '1.4rem', fontWeight: '800', textTransform: 'uppercase' }}>
+                {isRecording ? 'Listening...' : 'Hold to Ask Question'}
+              </div>
+              <div style={{ fontSize: '0.85rem', fontWeight: '600', opacity: 0.8 }}>
+                {isRecording ? 'Release to process question' : 'Press and hold down to record your voice'}
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* --- DISCLAIMER OVERLAY MODAL --- */}
+        {showDisclaimer && (
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px',
+            zIndex: 100
+          }}>
+            <div style={{
+              backgroundColor: '#ffffff',
+              border: '4px solid #292524',
+              borderRadius: '20px',
+              padding: '20px',
+              maxWidth: '520px',
+              width: '100%',
+              boxShadow: '0 8px 0px #292524',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: '900', color: '#1c1917', margin: 0 }}>
+                  LEGAL DISCLAIMER
+                </h3>
+                <button
+                  onClick={() => setShowDisclaimer(false)}
+                  style={{
+                    backgroundColor: '#fffbeb',
+                    border: '2px solid #292524',
+                    borderRadius: '50%',
+                    width: '36px',
+                    height: '36px',
+                    fontWeight: '900',
+                    cursor: 'pointer'
+                  }}
+                >
+                  X
+                </button>
+              </div>
+
+              {/* Placeholder text area for user customization */}
+              <div style={{
+                maxHeight: '220px',
+                overflowY: 'auto',
+                backgroundColor: '#fffbeb',
+                border: '2px solid #292524',
+                borderRadius: '12px',
+                padding: '14px',
+                fontSize: '0.9rem',
+                color: '#292524',
+                lineHeight: '1.5',
+                fontWeight: '500'
+              }}>
+                [ DISCLAIMER PLACEHOLDER TEXT GOES HERE ]
+                <br /><br />
+                This application is provided for informational purposes only and does not constitute legal advice. Please consult with a qualified attorney for advice regarding your specific situation.
+              </div>
+
+              <button
+                onClick={() => setShowDisclaimer(false)}
+                style={{
+                  width: '100%',
+                  backgroundColor: '#ffffff',
+                  color: '#1c1917',
+                  border: '3px solid #292524',
+                  borderRadius: '12px',
+                  padding: '12px',
+                  fontSize: '1rem',
+                  fontWeight: '800',
+                  cursor: 'pointer',
+                  boxShadow: '0 3px 0px #292524'
+                }}
+              >
+                I Understand
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // -------------------------------------------------------------
+  // SCREEN 6: LEGAL RIGHTS PROCESSING SCREEN
+  // -------------------------------------------------------------
+  if (currentScreen === 'LEGAL_PROCESSING') {
+    return (
+      <div style={containerStyle}>
+        {renderBackButton('LEGAL_RIGHTS')}
+
+        <div style={{ textAlign: 'center', maxWidth: '400px', padding: '0 16px' }}>
+          <h1 style={{ 
+            fontSize: '2.5rem', 
+            fontWeight: '900', 
+            color: '#1c1917', 
+            margin: '0 0 12px 0',
+            letterSpacing: '0.05em'
+          }}>
+            ANALYZING...
+          </h1>
+
+          <p style={{ 
+            fontSize: '1rem', 
+            fontWeight: '600', 
+            color: '#57534e', 
+            margin: 0 
+          }}>
+            Processing your question and retrieving legal guidance
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // -------------------------------------------------------------
+  // SCREEN 7: LEGAL RIGHTS AI RESPONSE SCREEN
+  // -------------------------------------------------------------
+  if (currentScreen === 'LEGAL_RESPONSE') {
+    return (
+      <div style={{
+        backgroundColor: '#fffbeb',
+        minHeight: '100vh',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        boxSizing: 'border-box',
+        position: 'relative'
+      }}>
+        {/* --- TOP BAR --- */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '12px 16px',
+          backgroundColor: '#fffbeb',
+          borderBottom: '2px solid #e7e5e4'
+        }}>
+          <button
+            onClick={() => setCurrentScreen('LEGAL_RIGHTS')}
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '2px solid #292524',
+              borderRadius: '12px',
+              padding: '8px 14px',
+              fontSize: '0.9rem',
+              fontWeight: '800',
+              cursor: 'pointer',
+              boxShadow: '0 2px 0px #292524'
+            }}
+          >
+            Back
+          </button>
+
+          <button
+            onClick={handleDone}
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '2px solid #292524',
+              borderRadius: '12px',
+              padding: '8px 16px',
+              fontSize: '0.9rem',
+              fontWeight: '800',
+              cursor: 'pointer',
+              boxShadow: '0 2px 0px #292524'
+            }}
+          >
+            Done
+          </button>
+        </div>
+
+        {/* --- CONTENT AREA --- */}
+        <div style={{
+          flex: 1,
+          overflowY: 'auto',
+          padding: '16px',
+          maxWidth: '680px',
+          width: '100%',
+          margin: '0 auto',
+          boxSizing: 'border-box',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px'
+        }}>
+          {/* User's Question */}
+          <div>
+            <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#78716c', marginBottom: '4px', textTransform: 'uppercase' }}>
+              Your Question
+            </div>
+            <div style={{
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '3px solid #292524',
+              borderRadius: '16px',
+              padding: '14px',
+              fontSize: '1rem',
+              fontWeight: '600',
+              boxShadow: '0 3px 0px #292524'
+            }}>
+              "{legalQueryText}"
+            </div>
+          </div>
+
+          {/* AI Legal Answer */}
+          <div>
+            <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#78716c', marginBottom: '4px', textTransform: 'uppercase' }}>
+              Legal Information Response
+            </div>
+            <div style={{
+              backgroundColor: '#fef08a',
+              color: '#1c1917',
+              border: '3px solid #292524',
+              borderRadius: '16px',
+              padding: '16px',
+              fontSize: '1.05rem',
+              fontWeight: '700',
+              lineHeight: '1.5',
+              boxShadow: '0 4px 0px #292524'
+            }}>
+              {legalAnswerText}
+            </div>
+          </div>
+        </div>
+
+        {/* --- BOTTOM CONTROLS --- */}
+        <div style={{
+          padding: '12px 16px 16px 16px',
+          backgroundColor: '#fffbeb',
+          borderTop: '2px solid #e7e5e4',
+          display: 'flex',
+          gap: '10px',
+          maxWidth: '680px',
+          width: '100%',
+          margin: '0 auto',
+          boxSizing: 'border-box'
+        }}>
+          <button
+            onClick={() => alert('Reading legal response aloud...')}
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '2px solid #292524',
+              borderRadius: '12px',
+              padding: '12px',
+              fontSize: '0.9rem',
+              fontWeight: '800',
+              cursor: 'pointer',
+              boxShadow: '0 3px 0px #292524'
+            }}
+          >
+            Read Aloud
+          </button>
+
+          <button
+            onClick={() => setCurrentScreen('LEGAL_RIGHTS')}
+            style={{
+              flex: 1,
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '3px solid #292524',
+              borderRadius: '12px',
+              padding: '12px',
+              fontSize: '0.95rem',
+              fontWeight: '900',
+              cursor: 'pointer',
+              boxShadow: '0 3px 0px #292524',
+              textAlign: 'center'
+            }}
+          >
+            Ask Another Question
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
 }
