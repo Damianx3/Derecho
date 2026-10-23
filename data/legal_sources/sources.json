@@ -178,5 +178,14 @@
     "publication_date": "2026-01-20",
     "source_url": "https://www.ilrc.org/community-resources/know-your-rights-faq",
     "local_file": "en/ilrc_kyr_faq_en.pdf"
+  },
+  {
+    "id": "ilrc_family_preparedness_plan_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Step-by-Step Family Preparedness Plan",
+    "language": "en",
+    "publication_date": "2026-02",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/step-step-family-preparedness-plan",
+    "local_file": "en/ilrc_family_preparedness_plan_en.pdf"
   }
 ]
