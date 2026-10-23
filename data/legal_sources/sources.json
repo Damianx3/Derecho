@@ -133,5 +133,14 @@
     "publication_date": "2025-08",
     "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Know-Your-Rights-at-Schools.pdf",
     "local_file": "en/ilrc_rights_schools_en.pdf"
+  },
+  {
+    "id": "ilrc_arrest_deportation_pipeline_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Arrest-to-Deportation Pipeline",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.ilrc.org/community-resources/arrest-deportation-pipeline",
+    "local_file": "en/ilrc_arrest_deportation_pipeline_en.pdf"
   }
 ]
