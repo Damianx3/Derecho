@@ -106,5 +106,14 @@
     "publication_date": "2025-12-22",
     "source_url": "https://www.nilc.org/resources/know-your-rights-warrants/",
     "local_file": "en/nilc_warrants_en.pdf"
+  },
+  {
+    "id": "nilc_bond_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Bond",
+    "language": "en",
+    "publication_date": "2026-04-09",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-bond/",
+    "local_file": "en/nilc_bond_en.pdf"
   }
 ]
