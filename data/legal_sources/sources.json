@@ -115,5 +115,14 @@
     "publication_date": "2026-04-09",
     "source_url": "https://www.nilc.org/resources/know-your-rights-bond/",
     "local_file": "en/nilc_bond_en.pdf"
+  },
+  {
+    "id": "nilc_find_loved_one_en",
+    "organization": "National Immigration Law Center",
+    "title": "How to Find a Loved One After a U.S. Immigration Arrest",
+    "language": "en",
+    "publication_date": null,
+    "source_url": "https://www.nilc.org/resources/how-to-find-a-loved-one-after-a-u-s-immigration-arrest/",
+    "local_file": "en/nilc_find_loved_one_en.pdf"
   }
 ]
