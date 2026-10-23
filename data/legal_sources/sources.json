@@ -1,92 +1,173 @@
 [
-    {
-      "id": "aclu_immigrants_rights_en",
-      "organization": "American Civil Liberties Union",
-      "title": "Immigrants' Rights",
-      "language": "en",
-      "publication_date": null,
-      "source_url": "https://www.aclu.org/know-your-rights/immigrants-rights",
-      "local_file": null
-    },
-    {
-      "id": "nilc_arrested_detained_en",
-      "organization": "National Immigration Law Center",
-      "title": "What to Do if You Are Arrested or Detained by Immigration",
-      "language": "en",
-      "publication_date": null,
-      "source_url": "https://www.nilc.org/resources/know-your-rights-what-to-do-if-arrested-detained-immigration/",
-      "local_file": "en/nilc_arrested_detained_en.pdf"
-    },
-    {
-      "id": "nilc_arrested_detained_es",
-      "organization": "National Immigration Law Center",
-      "title": "Qué puede hacer si usted es arrestado o detenido por Inmigración",
-      "language": "es",
-      "publication_date": null,
-      "source_url": "https://www.nilc.org/resources/conozca-sus-derechos-si-usted-es-arrestado-detenido-inmigracion/",
-      "local_file": "es/nilc_arrested_detained_es.pdf"
-    },
-    {
-      "id": "nilc_constitutional_rights_en",
-      "organization": "National Immigration Law Center",
-      "title": "Know Your Rights Under the U.S. Constitution – No Matter Who Is President",
-      "language": "en",
-      "publication_date": "2025-01",
-      "source_url": "https://www.nilc.org/resources/everyone-has-certain-basic-rights/",
-      "local_file": "en/nilc_constitutional_rights_en.pdf"
-    },
-    {
-      "id": "nilc_constitutional_rights_es",
-      "organization": "National Immigration Law Center",
-      "title": "Conozca sus derechos bajo la Constitución de EE. UU., sea quien sea el presidente",
-      "language": "es",
-      "publication_date": "2024",
-      "source_url": "https://www.nilc.org/resources/todos-tienen-derechos-basicos/",
-      "local_file": "es/nilc_constitutional_rights_es.pdf"
-    },
-    {
-      "id": "nilc_know_your_rights_en",
-      "organization": "National Immigration Law Center",
-      "title": "Know Your Rights",
-      "language": "en",
-      "publication_date": "2024",
-      "source_url": "https://media.nilc.org/wp-content/uploads/2024/10/NILC_KnowYourRights-ENG.pdf",
-      "local_file": "en/nilc_know_your_rights_en.pdf"
-    },
-    {
-      "id": "nijc_encounter_ice_en",
-      "organization": "National Immigrant Justice Center",
-      "title": "Know Your Rights: If You Encounter ICE",
-      "language": "en",
-      "publication_date": "2024-11-22",
-      "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
-      "local_file": "en/nijc_encounter_ice_en.pdf"
-    },
-    {
-      "id": "nijc_encounter_ice_es",
-      "organization": "National Immigrant Justice Center",
-      "title": "Conozca Sus Derechos: Si Se Encuentra Con ICE",
-      "language": "es",
-      "publication_date": "2024-11-22",
-      "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
-      "local_file": "es/nijc_encounter_ice_es.pdf"
-    },
-    {
-      "id": "nilc_noncitizen_registry_en",
-      "organization": "National Immigration Law Center",
-      "title": "Know Your Rights: Noncitizen Registry",
-      "language": "en",
-      "publication_date": "2025-03-10",
-      "source_url": "https://www.nilc.org/resources/know-your-rights-trumps-registration-requirement-for-immigrants/",
-      "local_file": "en/nilc_noncitizen_registry_en.pdf"
-    },
-    {
-      "id": "nilc_protecting_students_families_en",
-      "organization": "National Immigration Law Center",
-      "title": "Protecting Our Students and Families",
-      "language": "en",
-      "publication_date": null,
-      "source_url": "https://www.nilc.org/resources/protecting-our-students-and-families/",
-      "local_file": "en/nilc_protecting_students_families_en.pdf"
-    }
-  ]
+  {
+    "id": "aclu_immigrants_rights_en",
+    "organization": "American Civil Liberties Union",
+    "title": "Immigrants' Rights",
+    "language": "en",
+    "publication_date": null,
+    "source_url": "https://www.aclu.org/know-your-rights/immigrants-rights",
+    "local_file": null
+  },
+  {
+    "id": "nilc_arrested_detained_en",
+    "organization": "National Immigration Law Center",
+    "title": "What to Do if You Are Arrested or Detained by Immigration",
+    "language": "en",
+    "publication_date": null,
+    "source_url": "https://www.nilc.org/resources/know-your-rights-what-to-do-if-arrested-detained-immigration/",
+    "local_file": "en/nilc_arrested_detained_en.pdf"
+  },
+  {
+    "id": "nilc_arrested_detained_es",
+    "organization": "National Immigration Law Center",
+    "title": "Qué puede hacer si usted es arrestado o detenido por Inmigración",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.nilc.org/resources/conozca-sus-derechos-si-usted-es-arrestado-detenido-inmigracion/",
+    "local_file": "es/nilc_arrested_detained_es.pdf"
+  },
+  {
+    "id": "nilc_constitutional_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights Under the U.S. Constitution – No Matter Who Is President",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/resources/everyone-has-certain-basic-rights/",
+    "local_file": "en/nilc_constitutional_rights_en.pdf"
+  },
+  {
+    "id": "nilc_constitutional_rights_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca sus derechos bajo la Constitución de EE. UU., sea quien sea el presidente",
+    "language": "es",
+    "publication_date": "2024",
+    "source_url": "https://www.nilc.org/resources/todos-tienen-derechos-basicos/",
+    "local_file": "es/nilc_constitutional_rights_es.pdf"
+  },
+  {
+    "id": "nilc_know_your_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights",
+    "language": "en",
+    "publication_date": "2024",
+    "source_url": "https://media.nilc.org/wp-content/uploads/2024/10/NILC_KnowYourRights-ENG.pdf",
+    "local_file": "en/nilc_know_your_rights_en.pdf"
+  },
+  {
+    "id": "nijc_encounter_ice_en",
+    "organization": "National Immigrant Justice Center",
+    "title": "Know Your Rights: If You Encounter ICE",
+    "language": "en",
+    "publication_date": "2024-11-22",
+    "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+    "local_file": "en/nijc_encounter_ice_en.pdf"
+  },
+  {
+    "id": "nijc_encounter_ice_es",
+    "organization": "National Immigrant Justice Center",
+    "title": "Conozca Sus Derechos: Si Se Encuentra Con ICE",
+    "language": "es",
+    "publication_date": "2024-11-22",
+    "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+    "local_file": "es/nijc_encounter_ice_es.pdf"
+  },
+  {
+    "id": "nilc_noncitizen_registry_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Noncitizen Registry",
+    "language": "en",
+    "publication_date": "2025-03-10",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-trumps-registration-requirement-for-immigrants/",
+    "local_file": "en/nilc_noncitizen_registry_en.pdf"
+  },
+  {
+    "id": "nilc_protecting_students_families_en",
+    "organization": "National Immigration Law Center",
+    "title": "Protecting Our Students and Families",
+    "language": "en",
+    "publication_date": null,
+    "source_url": "https://www.nilc.org/resources/protecting-our-students-and-families/",
+    "local_file": "en/nilc_protecting_students_families_en.pdf"
+  },
+  {
+    "id": "nilc_parents_rights_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca sus derechos: Padres",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.nilc.org/",
+    "local_file": "es/nilc_parents_rights_es.pdf"
+  },
+  {
+    "id": "nilc_warrants_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Warrants",
+    "language": "en",
+    "publication_date": "2025-12-22",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-warrants/",
+    "local_file": "en/nilc_warrants_en.pdf"
+  },
+  {
+    "id": "nilc_bond_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Bond",
+    "language": "en",
+    "publication_date": "2026-04-09",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-bond/",
+    "local_file": "en/nilc_bond_en.pdf"
+  },
+  {
+    "id": "nilc_find_loved_one_en",
+    "organization": "National Immigration Law Center",
+    "title": "How to Find a Loved One After a U.S. Immigration Arrest",
+    "language": "en",
+    "publication_date": null,
+    "source_url": "https://www.nilc.org/resources/how-to-find-a-loved-one-after-a-u-s-immigration-arrest/",
+    "local_file": "en/nilc_find_loved_one_en.pdf"
+  },
+  {
+    "id": "ilrc_rights_schools_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights at Schools",
+    "language": "en",
+    "publication_date": "2025-08",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Know-Your-Rights-at-Schools.pdf",
+    "local_file": "en/ilrc_rights_schools_en.pdf"
+  },
+  {
+    "id": "ilrc_arrest_deportation_pipeline_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Arrest-to-Deportation Pipeline",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.ilrc.org/community-resources/arrest-deportation-pipeline",
+    "local_file": "en/ilrc_arrest_deportation_pipeline_en.pdf"
+  },
+  {
+    "id": "ilrc_court_order_protections_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Protections Against Immigration Enforcement That Come from Court Orders",
+    "language": "en",
+    "publication_date": "2025-05-27",
+    "source_url": "https://www.ilrc.org/community-resources/protections-against-immigration-enforcement-come-court-orders",
+    "local_file": "en/ilrc_court_order_protections_en.pdf"
+  },
+  {
+    "id": "ilrc_expanded_expedited_removal_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Toolkit to Assist People Facing Expanded Expedited Removal",
+    "language": "en",
+    "publication_date": "2025-02-21",
+    "source_url": "https://www.ilrc.org/community-resources/toolkit-assist-people-facing-expanded-expedited-removal",
+    "local_file": "en/ilrc_expanded_expedited_removal_en.pdf"
+  },
+  {
+    "id": "ilrc_confronted_by_ice_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights When Confronted by ICE",
+    "language": "en",
+    "publication_date": "2025-05-15",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/know-your-rights-when-confronted-ice-flyer",
+    "local_file": "en/ilrc_confronted_by_ice_en.pdf"
+  }
+]
