@@ -205,5 +205,41 @@
     "publication_date": "2025-12-08",
     "source_url": "https://www.ilrc.org/community-resources/escalating-immigration-enforcement-practices",
     "local_file": "en/ilrc_escalating_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_protest_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Immigrants' Participation in Protests",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-immigrants-participation-in-protests/",
+    "local_file": "en/nilc_protest_rights_en.pdf"
+  },
+  {
+    "id": "nilc_health_care_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Health Care and Health Insurance for Immigrants",
+    "language": "en",
+    "publication_date": "2025-01-22",
+    "source_url": "https://www.nilc.org/resources/health-insurance-and-care-rights/",
+    "local_file": "en/nilc_health_care_rights_en.pdf"
+  },
+  {
+    "id": "nilc_parents_detained_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Five Things Parents Detained by ICE Should Know",
+    "language": "en",
+    "publication_date": "2025-11-20",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-five-things-parents-detained-by-ice-should-know/",
+    "local_file": "en/nilc_parents_detained_rights_en.pdf"
+  },
+  {
+    "id": "nilc_education_immigration_enforcement_en",
+    "organization": "National Immigration Law Center",
+    "title": "Education Providers and Immigration Enforcement: Know Your Rights & Your Students' Rights",
+    "language": "en",
+    "publication_date": "2025-02-25",
+    "source_url": "https://www.nilc.org/resources/education-providers-and-immigration-enforcement-know-your-rights-know-your-students-rights/",
+    "local_file": "en/nilc_education_immigration_enforcement_en.pdf"
   }
 ]
