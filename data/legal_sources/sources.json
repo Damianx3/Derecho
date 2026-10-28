@@ -241,5 +241,92 @@
     "publication_date": "2025-02-25",
     "source_url": "https://www.nilc.org/resources/education-providers-and-immigration-enforcement-know-your-rights-know-your-students-rights/",
     "local_file": "en/nilc_education_immigration_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_employer_immigration_enforcement_en",
+    "organization": "National Immigration Law Center",
+    "title": "A Guide for Employers: What to Do if Immigration Comes to Your Workplace",
+    "language": "en",
+    "publication_date": "2025-01-24",
+    "source_url": "https://www.nilc.org/resources/a-guide-for-employers-what-to-do-if-immigration-comes-to-your-workplace/",
+    "local_file": "en/nilc_employer_immigration_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_kyr_card_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights Card",
+    "language": "en",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-card/",
+    "local_file": "en/nilc_kyr_card_en.pdf"
+  },
+  {
+    "id": "nilc_warrants_subpoenas_en",
+    "organization": "National Immigration Law Center",
+    "title": "Warrants & Subpoenas: What to Look Out for and How to Respond",
+    "language": "en",
+    "publication_date": "2025-01-28",
+    "source_url": "https://www.nilc.org/resources/warrants-and-subpoenas-facts/",
+    "local_file": "en/nilc_warrants_subpoenas_en.pdf"
+  },
+  {
+    "id": "nilc_healthcare_providers_enforcement_en",
+    "organization": "National Immigration Law Center",
+    "title": "Health Care Providers and Immigration Enforcement: Know Your Rights, Know Your Patients' Rights",
+    "language": "en",
+    "source_url": "https://www.nilc.org/resources/healthcare-provider-and-patients-rights-imm-enf/",
+    "local_file": "en/nilc_healthcare_providers_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_cbp_home_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: CBP Home",
+    "language": "en",
+    "publication_date": "2026-02-12",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-cbp-home/",
+    "local_file": "en/nilc_cbp_home_rights_en.pdf"
+  },
+  {
+    "id": "nilc_healthcare_enforcement_provider_guide_en",
+    "organization": "National Immigration Law Center",
+    "title": "Health Care and U.S. Immigration Enforcement: What Providers Need to Know",
+    "language": "en",
+    "publication_date": "2025-03-13",
+    "source_url": "https://www.nilc.org/resources/health-care-and-u-s-immigration-enforcement-what-providers-need-to-know/",
+    "local_file": "en/nilc_healthcare_enforcement_provider_guide_en.pdf"
+  },
+  {
+    "id": "ilrc_kyr_solidarity_sign_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights Solidarity Signs",
+    "language": "en",
+    "publication_date": "2025-06-02",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/solidarity-signs",
+    "local_file": "en/ilrc_kyr_solidarity_sign_en.pdf"
+  },
+  {
+    "id": "ilrc_immigrant_families_kyr_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights and What Immigrant Families Should Do Now",
+    "language": "en",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights-and-what-immigrant-families-should-do-now",
+    "local_file": "en/ilrc_immigrant_families_kyr_en.pdf"
+  },
+  {
+    "id": "ilrc_immigration_preparedness_toolkit_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Immigration Preparedness Toolkit",
+    "language": "en",
+    "publication_date": "2020-04",
+    "source_url": "https://www.ilrc.org/sites/default/files/resources/imm_preparedness_kit_april2020_1.pdf",
+    "local_file": "en/ilrc_immigration_preparedness_toolkit_en.pdf"
+  },
+  {
+    "id": "nilc_constitutional_rights_president_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights Under the U.S. Constitution — No Matter Who Is President",
+    "language": "en",
+    "publication_date": "2025-01-29",
+    "source_url": "https://www.nilc.org/resources/everyone-has-certain-basic-rights/",
+    "local_file": "en/nilc_constitutional_rights_president_en.pdf"
   }
 ]
