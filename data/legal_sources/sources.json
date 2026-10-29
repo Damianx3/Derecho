@@ -328,5 +328,127 @@
     "publication_date": "2025-01-29",
     "source_url": "https://www.nilc.org/resources/everyone-has-certain-basic-rights/",
     "local_file": "en/nilc_constitutional_rights_president_en.pdf"
+  },
+  {
+    "id": "ilrc_youth_kyr_handbook_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights: A Guide for Immigrant Youth",
+    "language": "en",
+    "publication_date": "2015-06",
+    "source_url": "https://www.ilrc.org/sites/default/files/documents/youth_handbook-2015-06_05-en.pdf",
+    "local_file": "en/ilrc_youth_kyr_handbook_en.pdf"
+  },
+  {
+    "id": "nilc_arrested_detained_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: What to Do if You Are Arrested or Detained by Immigration",
+    "language": "en",
+    "publication_date": "2025-01-14",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-what-to-do-if-arrested-detained-immigration/",
+    "local_file": "en/nilc_arrested_detained_2025_en.pdf"
+  },
+  {
+    "id": "nilc_immigration_encounter_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: What to Do if Immigration Approaches, Arrests, or Detains You",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/05/KYR-What-To-Do-if-Immigration-Approaches-Arrests-or-Detains-You-ENG-May-2025.pdf",
+    "local_file": "en/nilc_immigration_encounter_2025_en.pdf"
+  },
+  {
+    "id": "nilc_immigrant_refugee_children_educators_en",
+    "organization": "National Immigration Law Center",
+    "title": "Immigrant and Refugee Children: A Guide for Educators and School Support Staff",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/05/uac_educators_guide_2025-0501225.pdf",
+    "local_file": "en/nilc_immigrant_refugee_children_educators_en.pdf"
+  },
+  {
+    "id": "nilc_kyr_card_es",
+    "organization": "National Immigration Law Center",
+    "title": "Tarjeta de Conozca Sus Derechos",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-card/",
+    "local_file": "es/nilc_kyr_card_es.pdf"
+  },
+  {
+    "id": "ilrc_kyr_solidarity_sign_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos — Letrero de Solidaridad",
+    "language": "es",
+    "publication_date": "2025-06",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-06/KYR-LETRERO-ESPA%C3%91OL-AZUL.pdf",
+    "local_file": "es/ilrc_kyr_solidarity_sign_es.pdf"
+  },
+  {
+    "id": "nilc_immigration_encounter_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca Sus Derechos: Qué Hacer si Inmigración se Acerca, lo Arresta o lo Detiene",
+    "language": "es",
+    "publication_date": "2025-05",
+    "source_url": "https://media.nilc.org/wp-content/uploads/2025/05/SPA_KYR-What-To-Do-if-Immigration-Approaches-Arrests-or-Detains-You-May-2025.pdf",
+    "local_file": "es/nilc_immigration_encounter_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_immigrant_families_kyr_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos y Qué Deben Hacer las Familias Inmigrantes Ahora",
+    "language": "es",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights-and-what-immigrant-families-should-do-now",
+    "local_file": "es/ilrc_immigrant_families_kyr_es.pdf"
+  },
+  {
+    "id": "ilrc_immigration_preparedness_toolkit_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Kit de Preparación para Inmigrantes",
+    "language": "es",
+    "publication_date": "2020-06",
+    "source_url": "https://www.ilrc.org/resources/community/immigration-preparedness-toolkit",
+    "local_file": "es/ilrc_immigration_preparedness_toolkit_es.pdf"
+  },
+  {
+    "id": "nilc_bond_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca Sus Derechos: Fianza",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-bond/",
+    "local_file": "es/nilc_bond_es.pdf"
+  },
+  {
+    "id": "ilrc_confronted_by_ice_flyer_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos al Enfrentarse con ICE",
+    "language": "es",
+    "publication_date": "2025-05-15",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/know-your-rights-when-confronted-ice-flyer",
+    "local_file": "es/ilrc_confronted_by_ice_flyer_es.pdf"
+  },
+  {
+    "id": "nilc_parents_detained_rights_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca Sus Derechos: Cinco Cosas que los Padres Detenidos por ICE Deben Saber",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-five-things-parents-detained-by-ice-should-know/",
+    "local_file": "es/nilc_parents_detained_rights_2025_es.pdf"
+  },
+  {
+    "id": "nilc_protecting_students_families_es",
+    "organization": "National Immigration Law Center",
+    "title": "Protegiendo a Nuestros Estudiantes y Familias",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/protecting-our-students-and-families/",
+    "local_file": "es/nilc_protecting_students_families_es.pdf"
+  },
+  {
+    "id": "nilc_daleros_rights_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Lo Que Los DALEros Deben Saber Bajo La Administración Trump",
+    "language": "es",
+    "publication_date": "2025-03-17",
+    "source_url": "https://www.nilc.org/resources/lo-que-los-daleros-deben-saber-bajo-la-administracion-trump/",
+    "local_file": "es/nilc_daleros_rights_2025_es.pdf"
   }
+
 ]
