@@ -449,6 +449,97 @@
     "publication_date": "2025-03-17",
     "source_url": "https://www.nilc.org/resources/lo-que-los-daleros-deben-saber-bajo-la-administracion-trump/",
     "local_file": "es/nilc_daleros_rights_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_know_your_rights_schools_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights at Schools",
+    "language": "en",
+    "publication_date": "2025-08",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Know-Your-Rights-at-Schools.pdf",
+    "local_file": "en/ilrc_know_your_rights_schools_2025_en.pdf"
+  },
+  {
+    "id": "nilc_education_providers_enforcement_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Education Providers and Immigration Enforcement: Know Your Rights, Know Your Students' Rights",
+    "language": "en",
+    "publication_date": "2025-02",
+    "source_url": "https://media.nilc.org/wp-content/uploads/2025/02/2.25.25-Education-Providers-and-Immigration-Enforcement.pdf",
+    "local_file": "en/nilc_education_providers_enforcement_2025_en.pdf"
+  },
+  {
+    "id": "nilc_ice_arrests_warrants_faq_2026_en",
+    "organization": "National Immigration Law Center",
+    "title": "Frequently Asked Questions on Leaked ICE Instructions About Arrests and Warrants",
+    "language": "en",
+    "publication_date": "2026-02",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2026/02/Frequently-Asked-Questions-on-Leaked-ICE-Instructions-About-Arrests-and-Warrants.pdf",
+    "local_file": "en/nilc_ice_arrests_warrants_faq_2026_en.pdf"
+  },
+  {
+    "id": "ilrc_texas_travel_advisory_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Texas Travel Advisory Map",
+    "language": "en",
+    "publication_date": "2024-02",
+    "source_url": "https://www.ilrc.org/sites/default/files/2024-02/Texas%20Travel%20Advisory%20Map%20-%20Color.pdf",
+    "local_file": "en/ilrc_texas_travel_advisory_en.pdf"
+  },
+  {
+    "id": "nilc_protest_know_your_rights_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Immigrants' Participation in Protests",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/01/2.-2025-Protest-Know-Your-Rights_Final.pdf",
+    "local_file": "en/nilc_protest_know_your_rights_2025_en.pdf"
+  },
+  {
+    "id": "nilc_bond_eligibility_2026_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Who Is Eligible for Immigration Bond?",
+    "language": "en",
+    "publication_date": "2026-04",
+    "source_url": "https://media.nilc.org/2026/04/Know-Your-Rights-Bond.pdf",
+    "local_file": "en/nilc_bond_eligibility_2026_en.pdf"
+  },
+  {
+    "id": "ilrc_expedited_removal_toolkit_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Toolkit to Assist People Facing Expanded Expedited Removal",
+    "language": "en",
+    "publication_date": "2025-02",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-02/Toolkit%20to%20Assist%20People%20Facing%20Expanded%20Expedited%20Removal.pdf",
+    "local_file": "en/ilrc_expedited_removal_toolkit_2025_en.pdf"
+  },
+  {
+    "id": "nilc_public_benefits_guide_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Public Benefits Guide",
+    "language": "en",
+    "publication_date": "2025-11",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/11/Public-Benefits-Guide.pdf",
+    "local_file": "en/nilc_public_benefits_guide_2025_en.pdf"
+  },
+  {
+    "id": "nilc_patients_ice_custody_2026_en",
+    "organization": "National Immigration Law Center",
+    "title": "Advocating on Behalf of Patients in Immigration Custody",
+    "language": "en",
+    "publication_date": "2026-05",
+    "source_url": "https://media.nilc.org/2026/05/NILC_PatientsinICECustody_2026.pdf",
+    "local_file": "en/nilc_patients_ice_custody_2026_en.pdf"
+  },
+  {
+    "id": "nilc_immigrant_federal_programs_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Overview of Immigrant Eligibility for Federal Programs",
+    "language": "en",
+    "publication_date": "2025-12",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2024/05/overview-immeligfedprograms-2025-12-pdf.pdf",
+    "local_file": "en/nilc_immigrant_federal_programs_2025_en.pdf"
   }
+  
 
 ]
