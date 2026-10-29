@@ -169,5 +169,467 @@
     "publication_date": "2025-05-15",
     "source_url": "https://www.ilrc.org/community-resources/know-your-rights/know-your-rights-when-confronted-ice-flyer",
     "local_file": "en/ilrc_confronted_by_ice_en.pdf"
+  },
+  {
+    "id": "ilrc_kyr_faq_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights: Frequently Asked Questions",
+    "language": "en",
+    "publication_date": "2026-01-20",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights-faq",
+    "local_file": "en/ilrc_kyr_faq_en.pdf"
+  },
+  {
+    "id": "ilrc_family_preparedness_plan_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Step-by-Step Family Preparedness Plan",
+    "language": "en",
+    "publication_date": "2026-02",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/step-step-family-preparedness-plan",
+    "local_file": "en/ilrc_family_preparedness_plan_en.pdf"
+  },
+  {
+    "id": "ilrc_confronted_by_ice_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos al Ser Confrontado por ICE",
+    "language": "es",
+    "publication_date": "2025-05-15",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/know-your-rights-when-confronted-ice-flyer",
+    "local_file": "es/ilrc_confronted_by_ice_es.pdf"
+  },
+  {
+    "id": "ilrc_escalating_enforcement_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Escalating Immigration Enforcement Practices",
+    "language": "en",
+    "publication_date": "2025-12-08",
+    "source_url": "https://www.ilrc.org/community-resources/escalating-immigration-enforcement-practices",
+    "local_file": "en/ilrc_escalating_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_protest_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Immigrants' Participation in Protests",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-immigrants-participation-in-protests/",
+    "local_file": "en/nilc_protest_rights_en.pdf"
+  },
+  {
+    "id": "nilc_health_care_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Health Care and Health Insurance for Immigrants",
+    "language": "en",
+    "publication_date": "2025-01-22",
+    "source_url": "https://www.nilc.org/resources/health-insurance-and-care-rights/",
+    "local_file": "en/nilc_health_care_rights_en.pdf"
+  },
+  {
+    "id": "nilc_parents_detained_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Five Things Parents Detained by ICE Should Know",
+    "language": "en",
+    "publication_date": "2025-11-20",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-five-things-parents-detained-by-ice-should-know/",
+    "local_file": "en/nilc_parents_detained_rights_en.pdf"
+  },
+  {
+    "id": "nilc_education_immigration_enforcement_en",
+    "organization": "National Immigration Law Center",
+    "title": "Education Providers and Immigration Enforcement: Know Your Rights & Your Students' Rights",
+    "language": "en",
+    "publication_date": "2025-02-25",
+    "source_url": "https://www.nilc.org/resources/education-providers-and-immigration-enforcement-know-your-rights-know-your-students-rights/",
+    "local_file": "en/nilc_education_immigration_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_employer_immigration_enforcement_en",
+    "organization": "National Immigration Law Center",
+    "title": "A Guide for Employers: What to Do if Immigration Comes to Your Workplace",
+    "language": "en",
+    "publication_date": "2025-01-24",
+    "source_url": "https://www.nilc.org/resources/a-guide-for-employers-what-to-do-if-immigration-comes-to-your-workplace/",
+    "local_file": "en/nilc_employer_immigration_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_kyr_card_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights Card",
+    "language": "en",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-card/",
+    "local_file": "en/nilc_kyr_card_en.pdf"
+  },
+  {
+    "id": "nilc_warrants_subpoenas_en",
+    "organization": "National Immigration Law Center",
+    "title": "Warrants & Subpoenas: What to Look Out for and How to Respond",
+    "language": "en",
+    "publication_date": "2025-01-28",
+    "source_url": "https://www.nilc.org/resources/warrants-and-subpoenas-facts/",
+    "local_file": "en/nilc_warrants_subpoenas_en.pdf"
+  },
+  {
+    "id": "nilc_healthcare_providers_enforcement_en",
+    "organization": "National Immigration Law Center",
+    "title": "Health Care Providers and Immigration Enforcement: Know Your Rights, Know Your Patients' Rights",
+    "language": "en",
+    "source_url": "https://www.nilc.org/resources/healthcare-provider-and-patients-rights-imm-enf/",
+    "local_file": "en/nilc_healthcare_providers_enforcement_en.pdf"
+  },
+  {
+    "id": "nilc_cbp_home_rights_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: CBP Home",
+    "language": "en",
+    "publication_date": "2026-02-12",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-cbp-home/",
+    "local_file": "en/nilc_cbp_home_rights_en.pdf"
+  },
+  {
+    "id": "nilc_healthcare_enforcement_provider_guide_en",
+    "organization": "National Immigration Law Center",
+    "title": "Health Care and U.S. Immigration Enforcement: What Providers Need to Know",
+    "language": "en",
+    "publication_date": "2025-03-13",
+    "source_url": "https://www.nilc.org/resources/health-care-and-u-s-immigration-enforcement-what-providers-need-to-know/",
+    "local_file": "en/nilc_healthcare_enforcement_provider_guide_en.pdf"
+  },
+  {
+    "id": "ilrc_kyr_solidarity_sign_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights Solidarity Signs",
+    "language": "en",
+    "publication_date": "2025-06-02",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/solidarity-signs",
+    "local_file": "en/ilrc_kyr_solidarity_sign_en.pdf"
+  },
+  {
+    "id": "ilrc_immigrant_families_kyr_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights and What Immigrant Families Should Do Now",
+    "language": "en",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights-and-what-immigrant-families-should-do-now",
+    "local_file": "en/ilrc_immigrant_families_kyr_en.pdf"
+  },
+  {
+    "id": "ilrc_immigration_preparedness_toolkit_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Immigration Preparedness Toolkit",
+    "language": "en",
+    "publication_date": "2020-04",
+    "source_url": "https://www.ilrc.org/sites/default/files/resources/imm_preparedness_kit_april2020_1.pdf",
+    "local_file": "en/ilrc_immigration_preparedness_toolkit_en.pdf"
+  },
+  {
+    "id": "nilc_constitutional_rights_president_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights Under the U.S. Constitution — No Matter Who Is President",
+    "language": "en",
+    "publication_date": "2025-01-29",
+    "source_url": "https://www.nilc.org/resources/everyone-has-certain-basic-rights/",
+    "local_file": "en/nilc_constitutional_rights_president_en.pdf"
+  },
+  {
+    "id": "ilrc_youth_kyr_handbook_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights: A Guide for Immigrant Youth",
+    "language": "en",
+    "publication_date": "2015-06",
+    "source_url": "https://www.ilrc.org/sites/default/files/documents/youth_handbook-2015-06_05-en.pdf",
+    "local_file": "en/ilrc_youth_kyr_handbook_en.pdf"
+  },
+  {
+    "id": "nilc_arrested_detained_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: What to Do if You Are Arrested or Detained by Immigration",
+    "language": "en",
+    "publication_date": "2025-01-14",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-what-to-do-if-arrested-detained-immigration/",
+    "local_file": "en/nilc_arrested_detained_2025_en.pdf"
+  },
+  {
+    "id": "nilc_immigration_encounter_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: What to Do if Immigration Approaches, Arrests, or Detains You",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/05/KYR-What-To-Do-if-Immigration-Approaches-Arrests-or-Detains-You-ENG-May-2025.pdf",
+    "local_file": "en/nilc_immigration_encounter_2025_en.pdf"
+  },
+  {
+    "id": "nilc_immigrant_refugee_children_educators_en",
+    "organization": "National Immigration Law Center",
+    "title": "Immigrant and Refugee Children: A Guide for Educators and School Support Staff",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/05/uac_educators_guide_2025-0501225.pdf",
+    "local_file": "en/nilc_immigrant_refugee_children_educators_en.pdf"
+  },
+  {
+    "id": "nilc_kyr_card_es",
+    "organization": "National Immigration Law Center",
+    "title": "Tarjeta de Conozca Sus Derechos",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-card/",
+    "local_file": "es/nilc_kyr_card_es.pdf"
+  },
+  {
+    "id": "ilrc_kyr_solidarity_sign_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos — Letrero de Solidaridad",
+    "language": "es",
+    "publication_date": "2025-06",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-06/KYR-LETRERO-ESPA%C3%91OL-AZUL.pdf",
+    "local_file": "es/ilrc_kyr_solidarity_sign_es.pdf"
+  },
+  {
+    "id": "nilc_immigration_encounter_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca Sus Derechos: Qué Hacer si Inmigración se Acerca, lo Arresta o lo Detiene",
+    "language": "es",
+    "publication_date": "2025-05",
+    "source_url": "https://media.nilc.org/wp-content/uploads/2025/05/SPA_KYR-What-To-Do-if-Immigration-Approaches-Arrests-or-Detains-You-May-2025.pdf",
+    "local_file": "es/nilc_immigration_encounter_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_immigrant_families_kyr_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos y Qué Deben Hacer las Familias Inmigrantes Ahora",
+    "language": "es",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights-and-what-immigrant-families-should-do-now",
+    "local_file": "es/ilrc_immigrant_families_kyr_es.pdf"
+  },
+  {
+    "id": "ilrc_immigration_preparedness_toolkit_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Kit de Preparación para Inmigrantes",
+    "language": "es",
+    "publication_date": "2020-06",
+    "source_url": "https://www.ilrc.org/resources/community/immigration-preparedness-toolkit",
+    "local_file": "es/ilrc_immigration_preparedness_toolkit_es.pdf"
+  },
+  {
+    "id": "nilc_bond_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca Sus Derechos: Fianza",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-bond/",
+    "local_file": "es/nilc_bond_es.pdf"
+  },
+  {
+    "id": "ilrc_confronted_by_ice_flyer_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Conozca Sus Derechos al Enfrentarse con ICE",
+    "language": "es",
+    "publication_date": "2025-05-15",
+    "source_url": "https://www.ilrc.org/community-resources/know-your-rights/know-your-rights-when-confronted-ice-flyer",
+    "local_file": "es/ilrc_confronted_by_ice_flyer_es.pdf"
+  },
+  {
+    "id": "nilc_parents_detained_rights_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca Sus Derechos: Cinco Cosas que los Padres Detenidos por ICE Deben Saber",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/know-your-rights-five-things-parents-detained-by-ice-should-know/",
+    "local_file": "es/nilc_parents_detained_rights_2025_es.pdf"
+  },
+  {
+    "id": "nilc_protecting_students_families_es",
+    "organization": "National Immigration Law Center",
+    "title": "Protegiendo a Nuestros Estudiantes y Familias",
+    "language": "es",
+    "source_url": "https://www.nilc.org/resources/protecting-our-students-and-families/",
+    "local_file": "es/nilc_protecting_students_families_es.pdf"
+  },
+  {
+    "id": "nilc_daleros_rights_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Lo Que Los DALEros Deben Saber Bajo La Administración Trump",
+    "language": "es",
+    "publication_date": "2025-03-17",
+    "source_url": "https://www.nilc.org/resources/lo-que-los-daleros-deben-saber-bajo-la-administracion-trump/",
+    "local_file": "es/nilc_daleros_rights_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_know_your_rights_schools_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights at Schools",
+    "language": "en",
+    "publication_date": "2025-08",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Know-Your-Rights-at-Schools.pdf",
+    "local_file": "en/ilrc_know_your_rights_schools_2025_en.pdf"
+  },
+  {
+    "id": "nilc_education_providers_enforcement_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Education Providers and Immigration Enforcement: Know Your Rights, Know Your Students' Rights",
+    "language": "en",
+    "publication_date": "2025-02",
+    "source_url": "https://media.nilc.org/wp-content/uploads/2025/02/2.25.25-Education-Providers-and-Immigration-Enforcement.pdf",
+    "local_file": "en/nilc_education_providers_enforcement_2025_en.pdf"
+  },
+  {
+    "id": "nilc_ice_arrests_warrants_faq_2026_en",
+    "organization": "National Immigration Law Center",
+    "title": "Frequently Asked Questions on Leaked ICE Instructions About Arrests and Warrants",
+    "language": "en",
+    "publication_date": "2026-02",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2026/02/Frequently-Asked-Questions-on-Leaked-ICE-Instructions-About-Arrests-and-Warrants.pdf",
+    "local_file": "en/nilc_ice_arrests_warrants_faq_2026_en.pdf"
+  },
+  {
+    "id": "ilrc_texas_travel_advisory_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Texas Travel Advisory Map",
+    "language": "en",
+    "publication_date": "2024-02",
+    "source_url": "https://www.ilrc.org/sites/default/files/2024-02/Texas%20Travel%20Advisory%20Map%20-%20Color.pdf",
+    "local_file": "en/ilrc_texas_travel_advisory_en.pdf"
+  },
+  {
+    "id": "nilc_protest_know_your_rights_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Immigrants' Participation in Protests",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/01/2.-2025-Protest-Know-Your-Rights_Final.pdf",
+    "local_file": "en/nilc_protest_know_your_rights_2025_en.pdf"
+  },
+  {
+    "id": "nilc_bond_eligibility_2026_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: Who Is Eligible for Immigration Bond?",
+    "language": "en",
+    "publication_date": "2026-04",
+    "source_url": "https://media.nilc.org/2026/04/Know-Your-Rights-Bond.pdf",
+    "local_file": "en/nilc_bond_eligibility_2026_en.pdf"
+  },
+  {
+    "id": "ilrc_expedited_removal_toolkit_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Toolkit to Assist People Facing Expanded Expedited Removal",
+    "language": "en",
+    "publication_date": "2025-02",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-02/Toolkit%20to%20Assist%20People%20Facing%20Expanded%20Expedited%20Removal.pdf",
+    "local_file": "en/ilrc_expedited_removal_toolkit_2025_en.pdf"
+  },
+  {
+    "id": "nilc_public_benefits_guide_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Public Benefits Guide",
+    "language": "en",
+    "publication_date": "2025-11",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/11/Public-Benefits-Guide.pdf",
+    "local_file": "en/nilc_public_benefits_guide_2025_en.pdf"
+  },
+  {
+    "id": "nilc_patients_ice_custody_2026_en",
+    "organization": "National Immigration Law Center",
+    "title": "Advocating on Behalf of Patients in Immigration Custody",
+    "language": "en",
+    "publication_date": "2026-05",
+    "source_url": "https://media.nilc.org/2026/05/NILC_PatientsinICECustody_2026.pdf",
+    "local_file": "en/nilc_patients_ice_custody_2026_en.pdf"
+  },
+  {
+    "id": "nilc_immigrant_federal_programs_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Overview of Immigrant Eligibility for Federal Programs",
+    "language": "en",
+    "publication_date": "2025-12",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2024/05/overview-immeligfedprograms-2025-12-pdf.pdf",
+    "local_file": "en/nilc_immigrant_federal_programs_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_asylum_screening_tool_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Asylum Screening Tool",
+    "language": "en",
+    "publication_date": "2025-06",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-06/06-25%20Asylum%20Screening%20Tool.pdf",
+    "local_file": "en/ilrc_asylum_screening_tool_2025_en.pdf"
+  },
+  {
+    "id": "nilc_daca_workplace_rights_2024_en",
+    "organization": "National Immigration Law Center",
+    "title": "DACA and Your Workplace Rights",
+    "language": "en",
+    "publication_date": "2024",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2017/09/DACA-Workplace-Rights-2024.pdf",
+    "local_file": "en/nilc_daca_workplace_rights_2024_en.pdf"
+  },
+  {
+    "id": "ilrc_removal_proceedings_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Introduction to Removal Proceedings",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://store.ilrc.org/sites/default/files/2025-01/sample-pdf/chapter_1_removal_4th.pdf",
+    "local_file": "en/ilrc_removal_proceedings_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_court_order_protections_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Protections Against Immigration Enforcement That Come from Court Orders",
+    "language": "en",
+    "publication_date": "2025-05",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-05/Protections%20Against%20Immigration%20Enforcement%20That%20Come%20from%20Court%20Orders.pdf",
+    "local_file": "en/ilrc_court_order_protections_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_u_visa_pros_cons_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Pros and Cons of Applying for a U Visa",
+    "language": "en",
+    "publication_date": "2025-12",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-12/U-Visa-PA-FINAL.pdf",
+    "local_file": "en/ilrc_u_visa_pros_cons_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_immigration_relief_toolkit_2024_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Immigration Relief Toolkit",
+    "language": "en",
+    "publication_date": "2024-12",
+    "source_url": "https://www.ilrc.org/sites/default/files/2024-12/%C2%A7%20N.17%20Immigration%20Relief%20Toolkit%20-%20Updated%20December%202024.pdf",
+    "local_file": "en/ilrc_immigration_relief_toolkit_2024_en.pdf"
+  },
+  {
+    "id": "ilrc_t_visa_law_enforcement_guide_2024_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Using the T Visa Law Enforcement Resource Guide",
+    "language": "en",
+    "publication_date": "2024-02",
+    "source_url": "https://www.ilrc.org/sites/default/files/2024-02/Using%20the%20T%20Visa%20Law%20Enforcement%20Resource%20Guide.pdf",
+    "local_file": "en/ilrc_t_visa_law_enforcement_guide_2024_en.pdf"
+  },
+  {
+    "id": "ilrc_vawa_interview_practice_tips_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Practice Tips for Lawyers and Clients Preparing for a VAWA Interview",
+    "language": "en",
+    "publication_date": "2025-03",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-03/Practice-Tips-VAWA-March.pdf",
+    "local_file": "en/ilrc_vawa_interview_practice_tips_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_naturalization_risk_assessment_2025_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Risk Assessment for Naturalization Applicants",
+    "language": "en",
+    "publication_date": "2025-08",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Risk-Assessment-for-Natz-Applicants.pdf",
+    "local_file": "en/ilrc_naturalization_risk_assessment_2025_en.pdf"
+  },
+  {
+    "id": "nilc_losing_work_authorization_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Understanding Your Rights When Losing Work Authorization: FAQs for Immigrant Workers and Advocates",
+    "language": "en",
+    "publication_date": "2025-12",
+    "source_url": "https://media.nilc.org/wp-content/uploads/2025/12/FAQ-Understanding-Immigrant-Workers-Rights-Losing-Work-Authorization-December-2025.pdf",
+    "local_file": "en/nilc_losing_work_authorization_2025_en.pdf"
   }
+  
+
 ]
