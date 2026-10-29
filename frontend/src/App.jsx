@@ -837,9 +837,16 @@ export default function App() {
                 lineHeight: '1.5',
                 fontWeight: '500'
               }}>
-                [ DISCLAIMER PLACEHOLDER TEXT GOES HERE ]
+                <div>
+                <strong>[ DISCLAIMER ]</strong>
                 <br /><br />
-                This application is provided for informational purposes only and does not constitute legal advice. Please consult with a qualified attorney for advice regarding your specific situation.
+                <strong>Informational Purposes Only:</strong> The material provided—including Federal legal facts—is for general educational purposes only and does not constitute legal advice. No attorney-client relationship is created in any way by the use of our product, and we make no guarantees regarding its accuracy/completeness.
+                <br /><br />
+                <strong>Limitation of Liability:</strong> Use of this product is entirely at your own risk. You are solely responsible for all actions and decisions you take with the information provided, and we assume no legal or financial liability for any resulting consequences or losses.
+                <br /><br />
+                <strong>No Confidentiality:</strong> Unsolicited communications are not confidential or protected by attorney-client privilege. Consult a licensed attorney in your jurisdiction for situation-specific professional legal advice.
+
+              </div>
               </div>
 
               <button
@@ -988,24 +995,57 @@ export default function App() {
             </div>
           </div>
 
-          {/* AI Legal Answer */}
+          {/* Clickable AI Legal Answer with Source Indicator */}
           <div>
             <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#78716c', marginBottom: '4px', textTransform: 'uppercase' }}>
-              Legal Information Response
+              Legal Information Response (Tap to view source document)
             </div>
-            <div style={{
-              backgroundColor: '#fef08a',
-              color: '#1c1917',
-              border: '3px solid #292524',
-              borderRadius: '16px',
-              padding: '16px',
-              fontSize: '1.05rem',
-              fontWeight: '700',
-              lineHeight: '1.5',
-              boxShadow: '0 4px 0px #292524'
-            }}>
-              {legalAnswerText}
-            </div>
+            <button
+              onClick={() => setCurrentScreen('LEGAL_SOURCE_VIEWER')}
+              style={{
+                width: '100%',
+                backgroundColor: '#fef08a',
+                color: '#1c1917',
+                border: '3px solid #292524',
+                borderRadius: '16px',
+                padding: '16px',
+                fontSize: '1.05rem',
+                fontWeight: '700',
+                lineHeight: '1.5',
+                boxShadow: '0 4px 0px #292524',
+                cursor: 'pointer',
+                textAlign: 'left',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px'
+              }}
+            >
+              <div>
+                {legalAnswerText}
+              </div>
+
+              {/* Source Document Indicator Badge */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                borderTop: '2px dashed #292524',
+                paddingTop: '10px',
+                fontSize: '0.85rem',
+                fontWeight: '900'
+              }}>
+                <span>📄 Source: NILC Rights Guide (PDF)</span>
+                <span style={{
+                  backgroundColor: '#ffffff',
+                  border: '2px solid #292524',
+                  padding: '4px 10px',
+                  borderRadius: '8px',
+                  boxShadow: '0 2px 0px #292524'
+                }}>
+                  View File &rarr;
+                </span>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -1056,6 +1096,126 @@ export default function App() {
           >
             Ask Another Question
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  // -------------------------------------------------------------
+  // SCREEN 8: LEGAL SOURCE DOCUMENT VIEWER (PLACEHOLDER)
+  // -------------------------------------------------------------
+  if (currentScreen === 'LEGAL_SOURCE_VIEWER') {
+    return (
+      <div style={{
+        backgroundColor: '#fffbeb',
+        minHeight: '100vh',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        boxSizing: 'border-box',
+        position: 'relative'
+      }}>
+        {/* --- TOP BAR --- */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '12px 16px',
+          backgroundColor: '#fffbeb',
+          borderBottom: '2px solid #e7e5e4'
+        }}>
+          <button
+            onClick={() => setCurrentScreen('LEGAL_RESPONSE')}
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '2px solid #292524',
+              borderRadius: '12px',
+              padding: '8px 14px',
+              fontSize: '0.9rem',
+              fontWeight: '800',
+              cursor: 'pointer',
+              boxShadow: '0 2px 0px #292524'
+            }}
+          >
+            Back
+          </button>
+
+          <button
+            onClick={handleDone}
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#1c1917',
+              border: '2px solid #292524',
+              borderRadius: '12px',
+              padding: '8px 16px',
+              fontSize: '0.9rem',
+              fontWeight: '800',
+              cursor: 'pointer',
+              boxShadow: '0 2px 0px #292524'
+            }}
+          >
+            Done
+          </button>
+        </div>
+
+        {/* --- CONTENT AREA --- */}
+        <div style={{
+          flex: 1,
+          overflowY: 'auto',
+          padding: '16px',
+          maxWidth: '680px',
+          width: '100%',
+          margin: '0 auto',
+          boxSizing: 'border-box',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px'
+        }}>
+          <header style={{ textAlign: 'center', marginTop: '10px' }}>
+            <h1 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#1c1917', margin: '0 0 2px 0' }}>
+              Source Document Viewer
+            </h1>
+            <p style={{ color: '#57534e', fontSize: '0.85rem', margin: 0, fontWeight: '500' }}>
+              Retrieved from your local legal knowledge base
+            </p>
+          </header>
+
+          <div style={{
+            backgroundColor: '#ffffff',
+            border: '3px solid #292524',
+            borderRadius: '16px',
+            padding: '20px',
+            boxShadow: '0 5px 0px #292524',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '14px'
+          }}>
+            <div style={{ fontSize: '0.75rem', fontWeight: '800', color: '#78716c', textTransform: 'uppercase' }}>
+              File Reference
+            </div>
+            
+            <div style={{ fontSize: '1rem', fontWeight: '900', color: '#1c1917', wordBreak: 'break-all' }}>
+              📂 /data/legal_sources/es/nilc_confronted_by_ice_es.pdf
+            </div>
+
+            <p style={{ fontSize: '0.9rem', color: '#44403c', lineHeight: '1.5', margin: 0 }}>
+              Placeholder screen for source document. Later integrate a PDF reader view or display chunk text.
+            </p>
+
+            <div style={{
+              backgroundColor: '#fffbeb',
+              border: '2px solid #292524',
+              borderRadius: '10px',
+              padding: '12px',
+              fontSize: '0.85rem',
+              fontWeight: '600',
+              fontStyle: 'italic',
+              color: '#292524'
+            }}>
+              "{legalAnswerText}"
+            </div>
+          </div>
         </div>
       </div>
     );
