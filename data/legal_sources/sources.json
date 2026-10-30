@@ -629,7 +629,94 @@
     "publication_date": "2025-12",
     "source_url": "https://media.nilc.org/wp-content/uploads/2025/12/FAQ-Understanding-Immigrant-Workers-Rights-Losing-Work-Authorization-December-2025.pdf",
     "local_file": "en/nilc_losing_work_authorization_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_escalating_enforcement_2025_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Escalating Immigration Enforcement Practices",
+    "language": "es",
+    "publication_date": "2025-12",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-12/Escalating%20Immigration%20Enforcement%20Practices%20%28Spanish%29_0.pdf",
+    "local_file": "es/ilrc_escalating_enforcement_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_resisting_authoritarianism_2025_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Resisting Authoritarianism",
+    "language": "es",
+    "publication_date": "2025-04",
+    "source_url": "https://www.ilrc.org/community-resources/resisting-authoritarianism",
+    "local_file": "es/ilrc_resisting_authoritarianism_2025_es.pdf"
+  },
+  {
+    "id": "nilc_losing_work_authorization_2025_es",
+    "organization": "National Immigration Law Center",
+    "title": "Understanding Your Rights When Losing Work Authorization: FAQs for Immigrant Workers and Advocates",
+    "language": "es",
+    "publication_date": "2025-12",
+    "source_url": "https://www.nilc.org/resources/understanding-your-rights-when-losing-work-authorization-faqs-for-immigrant-workers-and-advocates/",
+    "local_file": "es/nilc_losing_work_authorization_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_immigration_dragnet_287g_2025_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Immigration Dragnet: The New Era of 287(g)",
+    "language": "es",
+    "publication_date": "2025",
+    "source_url": "https://www.ilrc.org/immigration-dragnet",
+    "local_file": "es/ilrc_immigration_dragnet_287g_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_texas_sb4_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Living with Texas SB 4: An Unprecedented State Deportation Scheme",
+    "language": "es",
+    "publication_date": "2026-07",
+    "source_url": "https://www.ilrc.org/community-resources/living-texas-sb-4-unprecedented-state-deportation-scheme",
+    "local_file": "es/ilrc_texas_sb4_2026_es.pdf"
+  },
+  {
+    "id": "nilc_bond_eligibility_2026_es",
+    "organization": "National Immigration Law Center",
+    "title": "Conozca sus derechos: ¿Quién puede solicitar fianza migratoria?",
+    "language": "es",
+    "publication_date": "2026-04",
+    "source_url": "https://www.nilc.org/resources/conozca-sus-derechos-quien-puede-solicitar-fianza-migratoria/",
+    "local_file": "es/nilc_bond_eligibility_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_operation_lone_star_costs_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "The Untenable Costs of Operation Lone Star",
+    "language": "es",
+    "source_url": "https://www.ilrc.org/community-resources/untenable-costs-operation-lone-star-ols",
+    "local_file": "es/ilrc_operation_lone_star_costs_es.pdf"
+  },
+  {
+    "id": "nilc_employer_guide_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "A Guide for Employers: What to Do if Immigration Comes to Your Workplace",
+    "language": "en",
+    "source_url": "https://www.nilc.org/resources/a-guide-for-employers-what-to-do-if-immigration-comes-to-your-workplace/",
+    "local_file": "en/nilc_employer_guide_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_driver_prosecutions_smuggling_texas_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Driver Prosecutions, Immigrants, and Smuggling in Texas",
+    "language": "es",
+    "source_url": "https://www.ilrc.org/resources/driver-prosecutions-immigrants-and-smuggling-texas",
+    "local_file": "es/ilrc_driver_prosecutions_smuggling_texas_es.pdf"
+  },
+  {
+    "id": "ilrc_cite_release_texas_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Cite and Release in Texas",
+    "language": "en",
+    "source_url": "https://www.ilrc.org/resources/cite-and-release-texas",
+    "local_file": "en/ilrc_cite_release_texas_en.pdf"
   }
+  
   
 
 ]
