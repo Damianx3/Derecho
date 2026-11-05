@@ -904,5 +904,122 @@
     "publication_date": "2024-04-01",
     "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-824instr.pdf",
     "local_file": "en/uscis_i824_approved_petition_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i131a_carrier_documentation_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Carrier Documentation",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-131ainstr.pdf",
+    "local_file": "en/uscis_i131a_carrier_documentation_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i134_financial_support_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Declaration of Financial Support",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-134instr.pdf",
+    "local_file": "en/uscis_i134_financial_support_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i290b_appeal_motion_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Notice of Appeal or Motion",
+    "language": "en",
+    "publication_date": "2024-05-31",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-290binstr.pdf",
+    "local_file": "en/uscis_i290b_appeal_motion_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i407_abandonment_lpr_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Record of Abandonment of Lawful Permanent Resident Status",
+    "language": "en",
+    "publication_date": "2024-09-25",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-407instr.pdf",
+    "local_file": "en/uscis_i407_abandonment_lpr_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i693_medical_examination_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Report of Immigration Medical Examination and Vaccination Record",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-693instr.pdf",
+    "local_file": "en/uscis_i693_medical_examination_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i539a_supplemental_information_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Supplemental Information for Application to Extend/Change Nonimmigrant Status",
+    "language": "en",
+    "publication_date": "2024-08-28",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-539a.pdf",
+    "local_file": "en/uscis_i539a_supplemental_information_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i131_travel_application_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Application for Travel Documents, Parole Documents, and Arrival/Departure Records",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-131.pdf",
+    "local_file": "en/uscis_i131_travel_application_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i765_employment_application_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Application for Employment Authorization",
+    "language": "en",
+    "publication_date": "2025-08-21",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-765.pdf",
+    "local_file": "en/uscis_i765_employment_application_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i485_adjustment_application_2026_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Application to Register Permanent Residence or Adjust Status",
+    "language": "en",
+    "publication_date": "2026-09-18",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-485.pdf",
+    "local_file": "en/uscis_i485_adjustment_application_2026_en.pdf"
+  },
+  {
+    "id": "uscis_n400_naturalization_application_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Application for Naturalization",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/n-400.pdf",
+    "local_file": "en/uscis_n400_naturalization_application_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i130_family_petition_application_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Petition for Alien Relative",
+    "language": "en",
+    "publication_date": "2024-04-01",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-130.pdf",
+    "local_file": "en/uscis_i130_family_petition_application_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i90_green_card_replacement_application_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Application to Replace Permanent Resident Card",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-90.pdf",
+    "local_file": "en/uscis_i90_green_card_replacement_application_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i821_tps_application_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Application for Temporary Protected Status",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-821.pdf",
+    "local_file": "en/uscis_i821_tps_application_2025_en.pdf"
   }
 ]
