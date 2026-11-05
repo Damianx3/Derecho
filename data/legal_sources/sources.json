@@ -1,14 +1,5 @@
 [
   {
-    "id": "aclu_immigrants_rights_en",
-    "organization": "American Civil Liberties Union",
-    "title": "Immigrants' Rights",
-    "language": "en",
-    "publication_date": null,
-    "source_url": "https://www.aclu.org/know-your-rights/immigrants-rights",
-    "local_file": null
-  },
-  {
     "id": "nilc_arrested_detained_en",
     "organization": "National Immigration Law Center",
     "title": "What to Do if You Are Arrested or Detained by Immigration",
@@ -715,8 +706,203 @@
     "language": "en",
     "source_url": "https://www.ilrc.org/resources/cite-and-release-texas",
     "local_file": "en/ilrc_cite_release_texas_en.pdf"
+  },
+  {
+    "id": "nilc_everify_rights_2023_es",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights: E-Verify",
+    "language": "es",
+    "publication_date": "2023",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2024/11/Know-Your-Rights-EVerify-SPAN-2023.pdf",
+    "local_file": "es/nilc_everify_rights_2023_es.pdf"
+  },
+  {
+    "id": "nilc_healthcare_insurance_rights_2025_en",
+    "organization": "National Immigration Law Center",
+    "title": "Know Your Rights to Health Care and Health Insurance",
+    "language": "en",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/resources/health-insurance-and-care-rights/",
+    "local_file": "en/nilc_healthcare_insurance_rights_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i539_instructions_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application to Extend/Change Nonimmigrant Status and Supplemental Form I-539A",
+    "language": "en",
+    "publication_date": "2024-08",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-539instr.pdf",
+    "local_file": "en/uscis_i539_instructions_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i589_asylum_instructions_2026_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Asylum and for Withholding of Removal",
+    "language": "en",
+    "publication_date": "2026-07-28",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-589instr.pdf",
+    "local_file": "en/uscis_i589_asylum_instructions_2026_en.pdf"
+  },
+  {
+    "id": "uscis_i765_employment_authorization_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Employment Authorization",
+    "language": "en",
+    "publication_date": "2025-08-21",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-765instr.pdf",
+    "local_file": "en/uscis_i765_employment_authorization_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i485_adjustment_status_2026_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application to Register Permanent Residence or Adjust Status",
+    "language": "en",
+    "publication_date": "2026-09-18",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-485instr.pdf",
+    "local_file": "en/uscis_i485_adjustment_status_2026_en.pdf"
+  },
+  {
+    "id": "uscis_n400_naturalization_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Naturalization",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/n-400instr.pdf",
+    "local_file": "en/uscis_n400_naturalization_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i130_family_petition_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Petition for Alien Relative and Supplemental Information for Spouse Beneficiary",
+    "language": "en",
+    "publication_date": "2024-04-01",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-130instr.pdf",
+    "local_file": "en/uscis_i130_family_petition_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i90_green_card_replacement_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application to Replace Permanent Resident Card",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-90instr.pdf",
+    "local_file": "en/uscis_i90_green_card_replacement_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i131_travel_documents_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Travel Documents, Parole Documents, and Arrival/Departure Records",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-131instr.pdf",
+    "local_file": "en/uscis_i131_travel_documents_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i821_temporary_protected_status_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Temporary Protected Status",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-821instr.pdf",
+    "local_file": "en/uscis_i821_temporary_protected_status_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i912_fee_waiver_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Request for Fee Waiver",
+    "language": "en",
+    "publication_date": "2025-07-22",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-912instr.pdf",
+    "local_file": "en/uscis_i912_fee_waiver_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i601_waiver_inadmissibility_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Waiver of Grounds of Inadmissibility",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-601instr.pdf",
+    "local_file": "en/uscis_i601_waiver_inadmissibility_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i751_remove_conditions_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Petition to Remove Conditions on Residence",
+    "language": "en",
+    "publication_date": "2024-04-01",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-751instr.pdf",
+    "local_file": "en/uscis_i751_remove_conditions_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i864_affidavit_support_2026_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Affidavit of Support Under Section 213A of the INA",
+    "language": "en",
+    "publication_date": "2026-08-24",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-864instr.pdf",
+    "local_file": "en/uscis_i864_affidavit_support_2026_en.pdf"
+  },
+  {
+    "id": "uscis_i765ws_employment_worksheet_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Form I-765 Worksheet",
+    "language": "en",
+    "publication_date": "2025-08-21",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-765ws.pdf",
+    "local_file": "en/uscis_i765ws_employment_worksheet_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i918_u_nonimmigrant_status_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Petition for U Nonimmigrant Status and Supplement A, Petition for Qualifying Family Member of U-1 Recipient",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-918instr.pdf",
+    "local_file": "en/uscis_i918_u_nonimmigrant_status_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i914_t_nonimmigrant_status_2026_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for T Nonimmigrant Status",
+    "language": "en",
+    "publication_date": "2026-09-14",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-914instr.pdf",
+    "local_file": "en/uscis_i914_t_nonimmigrant_status_2026_en.pdf"
+  },
+  {
+    "id": "uscis_i360_special_immigrant_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Petition for Amerasian, Widow(er), or Special Immigrant",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-360instr.pdf",
+    "local_file": "en/uscis_i360_special_immigrant_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i102_arrival_departure_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Replacement/Initial Nonimmigrant Arrival-Departure Document",
+    "language": "en",
+    "publication_date": "2024-04-01",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-102instr.pdf",
+    "local_file": "en/uscis_i102_arrival_departure_2024_en.pdf"
+  },
+  {
+    "id": "uscis_i129f_fiance_petition_2025_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Petition for Alien Fiancé(e)",
+    "language": "en",
+    "publication_date": "2025-01-20",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-129finstr.pdf",
+    "local_file": "en/uscis_i129f_fiance_petition_2025_en.pdf"
+  },
+  {
+    "id": "uscis_i824_approved_petition_2024_en",
+    "organization": "U.S. Citizenship and Immigration Services",
+    "title": "Instructions for Application for Action on an Approved Application or Petition",
+    "language": "en",
+    "publication_date": "2024-04-01",
+    "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-824instr.pdf",
+    "local_file": "en/uscis_i824_approved_petition_2024_en.pdf"
   }
-  
-  
-
 ]
