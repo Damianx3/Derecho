@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset default margin/padding and make sure html/body cover full height */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Force standard buttons to render dark text over light backgrounds */
+button {
+  color: #1c1917 !important; /* stone-900 */
+}
+
+/* Ensure form elements use legible dark text */
+select,
+input,
+textarea {
+  color: #1c1917 !important;
+}
