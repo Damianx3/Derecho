@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; width: 100%; min-height: 100%; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #fffbeb; color: #1c1917; }
+button, select, input { font: inherit; }
+button, select { min-height: 48px; }
+button:disabled, select:disabled { opacity: .5; cursor: default !important; }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid #2563eb !important; outline-offset: 3px; }
+.error-banner { background: #fff; color: #991b1b; border: 2px solid #991b1b; border-radius: 10px; padding: 8px 12px; font-size: 14px; }
+.volume-slider { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 700; }
+.volume-slider input { width: 130px; min-height: 36px; accent-color: #292524; }
+@media (max-height: 500px) {
+  h1 { font-size: 1.8rem !important; }
+}
