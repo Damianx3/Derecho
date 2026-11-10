@@ -1,62 +1,45 @@
-# DERECHO System Architecture
+# Derecho architecture
 
-## Overview
+Derecho runs on a Raspberry Pi. The root launcher starts or reuses the local
+services and opens the touchscreen in Firefox. See [Pi setup](pi-setup.md) for
+installation paths and logs.
 
-DERECHO is a privacy-first offline voice assistant running on a Raspberry Pi 5.
+## Translation today
 
-The system contains two primary modes.
+```text
+React touchscreen → FastAPI → arecord → input WAV
+On release: Whisper → transcript → Gemma → translation → Piper → aplay
+FastAPI returns the transcript and translation after playback completes.
+```
 
-## Translator Mode
+- `frontend/src/App.jsx` owns the touchscreen flow. `i18n.mjs` holds interface
+  strings independently of the selected speech languages.
+- `backend/derecho/api.py` exposes recording, language, Replay, and volume routes.
+  The kiosk connects to the API on `127.0.0.1:8000`.
+- `backend/derecho/integration/translator_pipeline.py` coordinates Whisper,
+  Gemma, and Piper. The user selects the source and target languages; the normal
+  launcher processes speech after release.
+- `backend/derecho/audio/devices.py` discovers USB capture and playback devices.
+  Replay uses the latest generated WAV without running inference again.
 
-Audio Input
-→ Whisper using whisper.cpp
-→ Language Detection
-→ Machine Translation
-→ Text Display
-→ Text-to-Speech
-→ Audio Output
+See the [walkthrough](translation-walkthrough.md) for a full turn and
+[audio setup](translation-audio.md) for device selection and voice models.
+[Performance experiments](translation-performance.md) describe optional paths
+that are disabled by the normal launcher.
 
-## Know Your Rights Mode
+## Know Your Rights
 
-Audio Input
-→ Whisper using whisper.cpp
-→ Hybrid Retrieval
-→ Relevant Trusted Sources
-→ Local Language Model
-→ Grounded Response
-→ Citation Verification
-→ Text-to-Speech
-→ Audio Output
+PDF ingestion and BM25 keyword retrieval exist in
+`backend/derecho/retrieval/`. Source PDFs, metadata, and searchable chunks
+are under `data/legal_sources/`.
 
-## Main Components
+The touchscreen entry is still a placeholder. The next planned flow is an
+English or Spanish text question, retrieval from the local corpus, and an
+answer citing the source and page. It should decline to answer when the
+available passages do not support an answer. Voice and hybrid retrieval are
+later work.
 
-### ASR
-Converts spoken audio into text using Whisper through the whisper.cpp implementation.
+## Local data
 
-### Translation
-Translates recognized speech between supported languages.
-
-### Retrieval
-Searches trusted immigration-rights material using keyword and semantic retrieval.
-
-### Legal AI
-Uses retrieved evidence to generate educational, source-grounded responses.
-
-### TTS
-Converts generated or translated text into speech.
-
-### User Interface
-Allows users to select modes, speak, view text, view sources, replay responses, and handle errors.
-
-### Hardware Integration
-Handles Raspberry Pi deployment, microphone, speaker, display, push-to-talk input, and power.
-
-## Privacy
-
-Normal system operation will not require internet access.
-
-User speech, transcripts, questions, and generated responses will not be intentionally retained after an interaction is complete.
-
-## Development Principle
-
-Individual components may be developed separately, but integration will occur throughout the semester rather than waiting until the end.
+Normal inference does not require internet. Done clears the on-screen
+conversation; the latest input and output WAVs remain on disk.

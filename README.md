@@ -17,36 +17,26 @@ once its tools and models are installed.
   retrieval are in the repository. The application screen is still a placeholder;
   cited answers are not yet connected to it.
 
-## Run on the Pi
+## Start here
 
-Use the Pi desktop session with a USB microphone and speaker connected. The
-launcher expects these components to be installed:
-
-| Component | Expected location or requirement |
-| --- | --- |
-| Backend environment | Repository `.venv/bin/python` with FastAPI and Uvicorn |
-| Frontend | Node 22.12+ on the 22.x line (or another version supported by the lockfile); run `npm ci` in `frontend/` during setup |
-| Whisper | `~/Projects/whisper.cpp/build/bin/whisper-cli` and `~/Projects/whisper.cpp/models/ggml-tiny.bin` |
-| Gemma | `~/Projects/gemma-translator/venv/bin/litert-lm`, with `gemma4-e2b` available locally |
-| Piper | `~/Projects/piper-venv/bin/piper` and the required model/config pairs in `~/Projects/piper-voices/` |
-| System commands | `curl`, `arecord`, `aplay`, and `firefox` |
-
-Once those prerequisites are in place, run from the repository root:
+On a configured Pi, run this from the repository root:
 
 ```sh
 ./start-derecho.sh
 ```
 
-The launcher waits for Gemma, FastAPI, and Vite, then opens Firefox in kiosk mode.
-It can reuse already-running services. After updating backend code, stop the
-previous backend before relaunching so it loads the new version.
+See [Pi setup and troubleshooting](docs/pi-setup.md) for prerequisites, model
+paths, audio setup, and logs.
 
-If a test fails, check `~/derecho-api.log`, `~/gemma.log`, or `~/derecho-ui.log`.
-The launcher writes the audio inventory to `~/derecho-audio-devices.log`.
-See [audio setup](docs/translation-audio.md) for device overrides and voice setup.
+## Find your way around
 
-Normal operation requires no internet connection. The latest input and output
-WAVs remain on the device; **Done** clears the conversation display.
+| Path | What it contains |
+| --- | --- |
+| `start-derecho.sh` | The launcher for the Pi kiosk |
+| `backend/derecho/` | FastAPI, recording, translation, speech, and legal retrieval |
+| `frontend/src/` | Touchscreen app and interface translations |
+| `data/legal_sources/` | Source PDFs, source metadata, and searchable chunks |
+| `docs/` | Setup, architecture, walkthroughs, and testing notes |
 
 ## Verify a change
 
@@ -64,5 +54,5 @@ Automated checks do not validate physical audio or model accuracy. For a Pi smok
 test, launch the app, run one English → Spanish turn, and verify the transcript,
 translation, playback, and Replay.
 
-See the [translator walkthrough](docs/translation-walkthrough.md) for the data
+See the [architecture map](docs/architecture.md), [translator walkthrough](docs/translation-walkthrough.md) for the data
 flow and [contribution guide](CONTRIBUTING.md) for the branch and review workflow.
