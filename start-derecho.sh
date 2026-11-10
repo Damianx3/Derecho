@@ -78,7 +78,7 @@ else
   # Use the working CLI pipeline; optional experiments require separate testing.
   (cd "$PROJECT_DIR" && exec env PYTHONPATH="$PROJECT_DIR/backend" \
     DERECHO_WHISPER_SERVER= DERECHO_LIVE_STT=0 DERECHO_PIPER_PERSISTENT=0 \
-    "$BACKEND_PYTHON" -m uvicorn derecho.api:app --host 0.0.0.0 --port 8000) \
+    "$BACKEND_PYTHON" -m uvicorn derecho.api:app --host 127.0.0.1 --port 8000) \
     > "$HOME/derecho-api.log" 2>&1 &
   wait_for_service "Derecho API" http://127.0.0.1:8000/api/health "$!" "$HOME/derecho-api.log"
 fi

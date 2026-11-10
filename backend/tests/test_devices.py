@@ -2,12 +2,26 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
-from subprocess import CompletedProcess
+from subprocess import CompletedProcess, TimeoutExpired
 
 from derecho.audio import devices, recorder
 
 
 class DeviceTests(unittest.TestCase):
+    def test_expired_recording_can_be_replaced_with_bounded_capture(self):
+        with TemporaryDirectory() as folder, \
+                patch.object(recorder, '_recording_process') as expired, \
+                patch.object(recorder, '_recording_path', None), \
+                patch.object(recorder, 'resolve_device', return_value='plughw:CARD=Device,DEV=0'), \
+                patch.object(recorder.subprocess, 'Popen') as spawn:
+            expired.poll.return_value = 0
+            spawn.return_value.wait.side_effect = TimeoutExpired('arecord', 0.2)
+            path = str(Path(folder) / 'next.wav')
+            self.assertEqual(recorder.start_recording(path), path)
+            command = spawn.call_args.args[0]
+            self.assertEqual(command[command.index('-d') + 1], '60')
+            self.assertIs(recorder._recording_process, spawn.return_value)
+
     def test_preferred_usb_speaker_ignores_hdmi_and_card_number(self):
         for number in ('2', '7'):
             listing = (f'card {number}: UACDemoV10 [USB Audio], device 0: USB Audio\n'

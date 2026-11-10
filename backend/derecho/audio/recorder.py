@@ -5,6 +5,7 @@ import wave
 
 from derecho.audio.devices import resolve_device
 
+MAX_RECORDING_SECONDS = 60
 _recording_process = None
 _recording_path = None
 
@@ -18,7 +19,9 @@ def start_recording(
     global _recording_path
 
     if _recording_process is not None:
-        raise RuntimeError("A recording is already in progress.")
+        if _recording_process.poll() is None:
+            raise RuntimeError("A recording is already in progress.")
+        _recording_process, _recording_path = None, None
 
     path = Path(output_path).expanduser()
     device = resolve_device('capture')
@@ -33,6 +36,8 @@ def start_recording(
         "16000",
         "-c",
         "1",
+        "-d",
+        str(MAX_RECORDING_SECONDS),
         str(path),
     ]
 
