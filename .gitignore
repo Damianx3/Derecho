@@ -68,3 +68,9 @@ cache/
 *.key
 *.pem
 credentials.json
+
+# macOS archive metadata and local Pi transfer artifacts
+._*
+/transfer/
+/derecho-*.tar.gz
+/pi-baseline-review.tar.gz

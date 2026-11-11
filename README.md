@@ -1,81 +1,58 @@
 # Derecho
 
-**Derecho: A Privacy-First Offline Multilingual Translator and Immigration Rights Voice Assistant**
+Derecho is a Raspberry Pi 5 senior-design project for offline speech translation
+and source-grounded immigration-rights information. The translator runs locally
+once its tools and models are installed.
 
-Derecho is a senior design project focused on building a standalone voice assistant that performs multilingual speech translation and provides source-grounded immigration-rights information without relying on cloud processing.
+## Current status
 
-The final prototype will run locally on a Raspberry Pi 5 with 8GB of RAM.
+- **Translator Mode:** Hold to speak, then release. Whisper recognizes the selected
+  source language, Gemma 4 E2B translates the text, and Piper speaks the result.
+  The touchscreen shows the transcript and translation, with Replay and volume.
+  USB capture and playback devices are selected automatically.
+- **Languages:** English and Spanish are the baseline. French, Brazilian Portuguese,
+  and German are selectable and labeled **Still testing**. Interface language is
+  separate from the two speech languages.
+- **Know Your Rights:** English and Spanish source files, PDF ingestion, and BM25
+  retrieval are in the repository. The application screen is still a placeholder;
+  cited answers are not yet connected to it.
 
-## Modes
+## Start here
 
-### Translator Mode
+On a configured Pi, run this from the repository root:
 
-Speech Input  
-→ Automatic Speech Recognition  
-→ Language Detection  
-→ Machine Translation  
-→ Text Display  
-→ Text-to-Speech
+```sh
+./start-derecho.sh
+```
 
-### Know Your Rights Mode
+See [Pi setup and troubleshooting](docs/pi-setup.md) for prerequisites, model
+paths, audio setup, and logs.
 
-Speech Input  
-→ Automatic Speech Recognition  
-→ Hybrid Information Retrieval  
-→ Trusted Source Passages  
-→ Local Language Model  
-→ Grounded Response + Citations  
-→ Text-to-Speech
+## Find your way around
 
-Know Your Rights Mode is intended to provide general educational information and is not a substitute for individualized legal advice.
+| Path | What it contains |
+| --- | --- |
+| `start-derecho.sh` | The launcher for the Pi kiosk |
+| `backend/derecho/` | FastAPI, recording, translation, speech, and legal retrieval |
+| `frontend/src/` | Touchscreen app and interface translations |
+| `data/legal_sources/` | Source PDFs, source metadata, and searchable chunks |
+| `docs/` | Setup, architecture, walkthroughs, and testing notes |
 
-## Project Goals
+## Verify a change
 
-- Fully offline normal operation
-- Multilingual speech translation
-- English and Spanish immigration-rights questions
-- Trusted local knowledge base
-- Hybrid keyword and semantic retrieval
-- Source-grounded responses
-- Citations
-- Refusal when supporting evidence is insufficient
-- Spoken input and output
-- Raspberry Pi deployment
-- Privacy-focused design
-- No intentional permanent storage of user conversations
+From the repository root:
 
-## Hardware
+```sh
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=backend python3 -m unittest discover -s backend/tests
+cd frontend
+npm ci
+npm test
+npm run build
+```
 
-- Raspberry Pi 5 8GB
-- Microphone
-- Speaker
-- Display
-- Push-to-talk control
-- Portable power source
+Automated checks do not validate physical audio or model accuracy. For a Pi smoke
+test, launch the app, run one English → Spanish turn, and verify the transcript,
+translation, playback, and Replay.
 
-## Technology
-
-Current and planned technologies include:
-
-- Python
-- Whisper using the whisper.cpp implementation
-- Local machine translation models
-- Local language models
-- BM25 keyword retrieval
-- Vector embeddings
-- FAISS or similar local vector search
-- Local text-to-speech
-- Raspberry Pi GPIO
-- Git and GitHub
-
-Final model and runtime choices may change based on accuracy, latency, memory usage, and Raspberry Pi performance.
-
-## Repository Structure
-
-```text
-backend/      AI and application logic
-frontend/     Local user interface
-data/         Legal sources and evaluation data
-hardware/     Raspberry Pi and GPIO-related code
-docs/         Architecture, testing plans, and technical decisions
-scripts/      Setup, benchmark, deployment, and utility scripts
+See the [architecture map](docs/architecture.md), [translator walkthrough](docs/translation-walkthrough.md) for the data
+flow and [contribution guide](CONTRIBUTING.md) for the branch and review workflow.
