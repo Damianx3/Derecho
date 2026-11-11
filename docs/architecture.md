@@ -6,6 +6,8 @@ installation paths and logs.
 
 ## Translation today
 
+![Translation pipeline from USB microphone through Whisper, Gemma, and Piper to USB speaker](images/translation-workflow.png)
+
 ```text
 React touchscreen → FastAPI → arecord → input WAV
 On release: Whisper → transcript → Gemma → translation → Piper → aplay
@@ -38,6 +40,11 @@ English or Spanish text question, retrieval from the local corpus, and an
 answer citing the source and page. It should decline to answer when the
 available passages do not support an answer. Voice and hybrid retrieval are
 later work.
+
+**Planned voice workflow.** The diagram shows a later design that combines
+BM25 and dense retrieval, generates cited answers, and reads them aloud.
+
+![Planned Know Your Rights voice workflow with Whisper, local documents, hybrid retrieval, Gemma, and Piper](images/know-your-rights-workflow.png)
 
 ## Local data
 
