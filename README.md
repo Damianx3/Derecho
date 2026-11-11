@@ -4,6 +4,8 @@ Derecho is a Raspberry Pi 5 senior-design project for offline speech translation
 and source-grounded immigration-rights information. The translator runs locally
 once its tools and models are installed.
 
+![Derecho home screen with an interface language selector and cards for Translation Mode and Legal Rights Mode](docs/images/home-screen.png)
+
 ## Current status
 
 - **Translator Mode:** Hold to speak, then release. Whisper recognizes the selected
