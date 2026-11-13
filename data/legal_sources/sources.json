@@ -31,8 +31,8 @@
     "organization": "National Immigration Law Center",
     "title": "Conozca sus derechos bajo la Constitución de EE. UU., sea quien sea el presidente",
     "language": "es",
-    "publication_date": "2024",
-    "source_url": "https://www.nilc.org/resources/todos-tienen-derechos-basicos/",
+    "publication_date": "2025-01",
+    "source_url": "https://www.nilc.org/wp-content/uploads/2025/02/SPA_2025.01.29-Rights-No-Matter-Who-Is-Pres_FINAL.pdf",
     "local_file": "es/nilc_constitutional_rights_es.pdf"
   },
   {
@@ -1021,5 +1021,86 @@
     "publication_date": "2025-01-20",
     "source_url": "https://www.uscis.gov/sites/default/files/document/forms/i-821.pdf",
     "local_file": "en/uscis_i821_tps_application_2025_en.pdf"
+  },
+  {
+    "id": "ilrc_texas_sb4_scheme_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Living with Texas SB 4: An Unprecedented State Deportation Scheme",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-08/Living%20with%20Texas%20SB%204-%20An%20Unprecedented%20State%20Deportation%20Scheme%20%28Spanish%29.pdf",
+    "local_file": "es/ilrc_texas_sb4_scheme_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_danger_road_kyr_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Danger on the Road: Community Know Your Rights",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-10/Danger%20on%20the%20Road%20-%20Community%20KYR%20%5BSpanish%5D.pdf",
+    "local_file": "es/ilrc_danger_road_kyr_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_texas_287g_transport_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Texas's Privately Operated and Armed 287(g) Transportation Scheme",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-10/ESP%20Texas%27s%20Privately%20Operated%20and%20Armed%20287%28g%29%20Transportation%20Scheme.pdf",
+    "local_file": "es/ilrc_texas_287g_transport_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_public_charge_alert_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Public Charge Alert",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-10/Public%20Charge%20Alert%20Oct%202026%20ESP_0.pdf",
+    "local_file": "es/ilrc_public_charge_alert_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_sijs_adjustment_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "SIJS Adjustment of Status",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-10/SIJS%20Adjustment%20of%20Status%20Oct%202026%20ESP.pdf",
+    "local_file": "es/ilrc_sijs_adjustment_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_danger_road_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Danger on the Road",
+    "language": "es",
+    "publication_date": null,
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-11/Danger%20on%20the%20Road%20%5BSpanish%5D.pdf",
+    "local_file": "es/ilrc_danger_road_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_protestors_rights_2024_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Know Your Rights for Noncitizen Protestors",
+    "language": "es",
+    "publication_date": "2024-05",
+    "source_url": "https://www.ilrc.org/sites/default/files/2024-05/KYR%20Noncitizen%20Protestors_2024_Spanish.pdf",
+    "local_file": "es/ilrc_protestors_rights_2024_es.pdf"
+  },
+  {
+    "id": "ilrc_family_preparedness_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Step-by-Step Family Preparedness Plan",
+    "language": "es",
+    "publication_date": "2026-03",
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-03/Step-by-Step-Family-Preparedness-Plan-SPA-2026.pdf",
+    "local_file": "es/ilrc_family_preparedness_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_bia_appeals_2026_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Changes to the Immigration Appeals Process",
+    "language": "es",
+    "publication_date": "2026-04",
+    "source_url": "https://www.ilrc.org/sites/default/files/2026-04/BIA-Appeals-Change-SPA.pdf",
+    "local_file": "es/ilrc_bia_appeals_2026_es.pdf"
   }
 ]
