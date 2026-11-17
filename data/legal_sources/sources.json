@@ -649,13 +649,13 @@
     "local_file": "es/nilc_losing_work_authorization_2025_es.pdf"
   },
   {
-    "id": "ilrc_immigration_dragnet_287g_2025_es",
+    "id": "ilrc_immigration_dragnet_287g_2025_en",
     "organization": "Immigrant Legal Resource Center",
     "title": "Immigration Dragnet: The New Era of 287(g)",
-    "language": "es",
+    "language": "en",
     "publication_date": "2025",
     "source_url": "https://www.ilrc.org/immigration-dragnet",
-    "local_file": "es/ilrc_immigration_dragnet_287g_2025_es.pdf"
+    "local_file": "en/ilrc_immigration_dragnet_287g_2025_en.pdf"
   },
   {
     "id": "ilrc_texas_sb4_2026_es",
@@ -1111,5 +1111,23 @@
     "publication_date": "2024",
     "source_url": "https://www.ilrc.org/sites/default/files/2024-05/KYR%20Noncitizen%20Protestors_2024_English.pdf",
     "local_file": "en/ilrc_protestors_rights_2024_en.pdf"
+  },
+  {
+    "id": "ilrc_carceral_carousel_2023_es",
+    "organization": "Immigrant Legal Resource Center / Detention Watch Network",
+    "title": "El Carrusel Carcelario",
+    "language": "es",
+    "publication_date": "2023",
+    "source_url": "https://www.ilrc.org/sites/default/files/2023-05/El%20Carrusel%20Carcelario%20%282023%29_3.pdf",
+    "local_file": "es/ilrc_carceral_carousel_2023_es.pdf"
+  },
+  {
+    "id": "ilrc_immigration_dragnet_287g_2025_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "La nueva era del programa 287(g)",
+    "language": "es",
+    "publication_date": "2025",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Immigration%20Dragnet%20-%20The%20New%20Era%20of%20287%28g%29%20-%20Spanish.pdf",
+    "local_file": "es/ilrc_immigration_dragnet_287g_2025_es.pdf"
   }
 ]

@@ -8,7 +8,7 @@ import time
 START_URL = "https://www.ilrc.org/"
 DOMAIN = "www.ilrc.org"
 USER_AGENT = "DerechoResearchSpider/0.1"
-MAX_PAGES = 100
+MAX_PAGES = 300
 DELAY = 2
 
 
