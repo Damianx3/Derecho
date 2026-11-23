@@ -58,8 +58,8 @@
     "organization": "National Immigrant Justice Center",
     "title": "Conozca Sus Derechos: Si Se Encuentra Con ICE",
     "language": "es",
-    "publication_date": "2024-11-22",
-    "source_url": "https://immigrantjustice.org/for-immigrants/know-your-rights/ice-encounter/",
+    "publication_date": "2026-01",
+    "source_url": "https://immigrantjustice.org/wp-content/uploads/2025/05/KYR-Encounter-ICE-Nov.-2024-Spanish.pdf",
     "local_file": "es/nijc_encounter_ice_es.pdf"
   },
   {
@@ -649,13 +649,13 @@
     "local_file": "es/nilc_losing_work_authorization_2025_es.pdf"
   },
   {
-    "id": "ilrc_immigration_dragnet_287g_2025_es",
+    "id": "ilrc_immigration_dragnet_287g_2025_en",
     "organization": "Immigrant Legal Resource Center",
     "title": "Immigration Dragnet: The New Era of 287(g)",
-    "language": "es",
+    "language": "en",
     "publication_date": "2025",
     "source_url": "https://www.ilrc.org/immigration-dragnet",
-    "local_file": "es/ilrc_immigration_dragnet_287g_2025_es.pdf"
+    "local_file": "en/ilrc_immigration_dragnet_287g_2025_en.pdf"
   },
   {
     "id": "ilrc_texas_sb4_2026_es",
@@ -1102,5 +1102,59 @@
     "publication_date": "2026-04",
     "source_url": "https://www.ilrc.org/sites/default/files/2026-04/BIA-Appeals-Change-SPA.pdf",
     "local_file": "es/ilrc_bia_appeals_2026_es.pdf"
+  },
+  {
+    "id": "ilrc_protestors_rights_2024_en",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "10 Things Noncitizen Protestors Need to Know",
+    "language": "en",
+    "publication_date": "2024",
+    "source_url": "https://www.ilrc.org/sites/default/files/2024-05/KYR%20Noncitizen%20Protestors_2024_English.pdf",
+    "local_file": "en/ilrc_protestors_rights_2024_en.pdf"
+  },
+  {
+    "id": "ilrc_carceral_carousel_2023_es",
+    "organization": "Immigrant Legal Resource Center / Detention Watch Network",
+    "title": "El Carrusel Carcelario",
+    "language": "es",
+    "publication_date": "2023",
+    "source_url": "https://www.ilrc.org/sites/default/files/2023-05/El%20Carrusel%20Carcelario%20%282023%29_3.pdf",
+    "local_file": "es/ilrc_carceral_carousel_2023_es.pdf"
+  },
+  {
+    "id": "ilrc_immigration_dragnet_287g_2025_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "La nueva era del programa 287(g)",
+    "language": "es",
+    "publication_date": "2025",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/Immigration%20Dragnet%20-%20The%20New%20Era%20of%20287%28g%29%20-%20Spanish.pdf",
+    "local_file": "es/ilrc_immigration_dragnet_287g_2025_es.pdf"
+  },
+  {
+    "id": "ilrc_programa_287g_2025_es",
+    "organization": "Immigrant Legal Resource Center",
+    "title": "Lo que hay que entender sobre el programa 287(g)",
+    "language": "es",
+    "publication_date": "2025-04",
+    "source_url": "https://www.ilrc.org/sites/default/files/2025-08/El-Programa-287g.pdf",
+    "local_file": "es/ilrc_programa_287g_2025_es.pdf"
+  },
+  {
+    "id": "nijc_immigration_fraud_2026_es",
+    "organization": "National Immigrant Justice Center",
+    "title": "Conozca Sus Derechos: No Sea Víctima del Fraude Migratorio",
+    "language": "es",
+    "publication_date": "2026-01",
+    "source_url": "https://immigrantjustice.org/wp-content/uploads/2026/01/KYR-Avoid-Immigration-Fraud-Jan.-2026-Spanish.pdf",
+    "local_file": "es/nijc_immigration_fraud_2026_es.pdf"
+  },
+  {
+    "id": "nijc_detained_adults_faq_2025_es",
+    "organization": "National Immigrant Justice Center",
+    "title": "Preguntas Frecuentes para Adultos Detenidos por Inmigración",
+    "language": "es",
+    "publication_date": "2025-01",
+    "source_url": "https://immigrantjustice.org/sites/default/files/content-type/know-your-rights/documents/2025-03/KYR-FAQ_Detained-Adults_SPANISH_Jan2025.pdf",
+    "local_file": "es/nijc_detained_adults_faq_2025_es.pdf"
   }
 ]
